@@ -40,4 +40,3 @@ IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway::
     .string "From what I've heard, LANCE has\n"
     .string "a cousin who's a GYM LEADER\l"
     .string "somewhere far away.$"
-
