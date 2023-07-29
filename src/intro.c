@@ -16,6 +16,8 @@
 #include "trig.h"
 #include "constants/songs.h"
 #include "constants/sound.h"
+#include "main_menu.h"
+#include "event_data.h"
 
 /*
     The intro is grouped into the following scenes
@@ -982,7 +984,7 @@ static bool8 SetUpCopyrightScreen(void)
         break;
     case 142:
         ResetSerial();
-        SetMainCallback2(CB2_WaitFadeBeforeSetUpIntro);
+        SetMainCallback2(CB2_InitTitleScreen);
         break;
     }
     return TRUE;
