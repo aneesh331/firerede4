@@ -685,10 +685,29 @@ static void CB2_NewGameScene(void)
 
 void StartNewGameScene(void)
 {
+    const u8 *player_src;
+    const u8 *rival_src;
+    u8 *player_dest;
+    u8 *rival_dest;
+    u8 i;
+    gSaveBlock2Ptr->playerGender = MALE;
+    player_dest = gSaveBlock2Ptr->playerName;
+    player_src = sMaleNameChoices[0];
+    for (i = 0; i < PLAYER_NAME_LENGTH && player_src[i] != EOS; i++)
+	    player_dest[i] = player_src[i];
+    for (; i < PLAYER_NAME_LENGTH + 1; i++)
+	    player_dest[i] = EOS;
+    rival_dest = gSaveBlock1Ptr->rivalName;
+    rival_src = sRivalNameChoices[0];
+    for (i = 0; i < PLAYER_NAME_LENGTH && rival_src[i] != EOS; i++)
+	    rival_dest[i] = rival_src[i];
+    for (; i < PLAYER_NAME_LENGTH + 1; i++)
+	    rival_dest[i] = EOS;
     gPlttBufferUnfaded[0] = RGB_BLACK;
     gPlttBufferFaded[0]   = RGB_BLACK;
-    CreateTask(Task_NewGameScene, 0);
-    SetMainCallback2(CB2_NewGameScene);
+    //CreateTask(Task_NewGameScene, 0);
+    SetMainCallback2(CB2_NewGame);
+    //SetMainCallback2(CB2_NewGameScene);
 }
 
 #define tSpriteTimer                data[0]
