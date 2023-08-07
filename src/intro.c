@@ -984,7 +984,7 @@ static bool8 SetUpCopyrightScreen(void)
         break;
     case 142:
         ResetSerial();
-        SetMainCallback2(CB2_InitTitleScreen);
+        SetMainCallback2(CB2_WaitFadeBeforeSetUpIntro);
         break;
     }
     return TRUE;
@@ -1001,6 +1001,7 @@ void CB2_InitCopyrightScreenAfterBootup(void)
             Sav2_ClearSetDefault();
         SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
     }
+    CB2_InitMainMenu();
 }
 
 void CB2_InitCopyrightScreenAfterTitleScreen(void)
