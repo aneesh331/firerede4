@@ -18370,4 +18370,12 @@ const struct Pkmn Pokemon_List[79] = {
 	},
 };
 
+const struct Pkmn NA_Pokemon = {
+	.species = SPECIES_NONE,
+	.type_1 = TYPE_NONE,
+	.type_2 = TYPE_NONE,
+	.bst = 0,
+	.moves = NULL
+};
+
 #endif

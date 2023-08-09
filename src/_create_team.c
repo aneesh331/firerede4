@@ -6,9 +6,9 @@ static u8 *InitTypeFactors(void);
 static void UpdateTypeFactors(const struct Pkmn pkmn, u8 *TypeFactors);
 static u8 GetTypeFactor(const struct Pkmn pkmn, u8 *TypeFactors);
 static u8 GetBSTFactor(const struct Pkmn pkmn, const struct Pkmn last_pkmn);
-static const struct Pkmn GeneratePokemon(const struct Pkmn *last_pkmn, u8 *TypeFactors);
+static u8 CheckForDuplicatePokemon(const struct Pkmn new_pkmn, struct Pkmn *team);
+static const struct Pkmn GeneratePokemon(const struct Pkmn *last_pkmn, u8 *TypeFactors, struct Pkmn *team);
 static struct Pkmn *CreateTeam(void);
-
 static const struct Move GetRandomMove(const struct Move *pkmn_learnset);
 static u8 CheckForDuplicateMoves(u16 move_name, u16 *moveset);
 static const struct Move ChooseFirstMove(u8 type_1, u8 type_2, const struct Move *pkmn_learnset);
@@ -61,22 +61,34 @@ static u8 GetBSTFactor(const struct Pkmn pkmn, const struct Pkmn last_pkmn)
     }
 }
 
-static const struct Pkmn GeneratePokemon(const struct Pkmn *last_pkmn, u8 *TypeFactors)
+static u8 CheckForDuplicatePokemon(const struct Pkmn new_pkmn, struct Pkmn *team)
 {
-    struct Pkmn new_pokemon;
+    u8 i;
+    for (i = 0; i < 6; i++)
+    {
+        if (new_pkmn.species == team[i].species) return 1;
+    }
+    return 0;
+}
+
+static const struct Pkmn GeneratePokemon(const struct Pkmn *last_pkmn, u8 *TypeFactors, struct Pkmn *team)
+{
+    struct Pkmn new_pkmn;
     u8 new_pkmn_factor;
-    if (last_pkmn == NULL) new_pokemon = Pokemon_List[Random() % ARRAY_COUNT(Pokemon_List)];
+    if (last_pkmn == NULL) new_pkmn = Pokemon_List[Random() % ARRAY_COUNT(Pokemon_List)];
     else
     {
-        new_pokemon = Pokemon_List[Random() % ARRAY_COUNT(Pokemon_List)];
-        new_pkmn_factor = GetTypeFactor(new_pokemon, TypeFactors) + GetBSTFactor(new_pokemon, *last_pkmn);
-        if (Random() % new_pkmn_factor != 0) GeneratePokemon(last_pkmn, TypeFactors);
+        new_pkmn = Pokemon_List[Random() % ARRAY_COUNT(Pokemon_List)];
+        if (CheckForDuplicatePokemon(new_pkmn, team) == 1) GeneratePokemon(last_pkmn, TypeFactors, team);
+        new_pkmn_factor = GetTypeFactor(new_pkmn, TypeFactors) + GetBSTFactor(new_pkmn, *last_pkmn);
+        if (Random() % new_pkmn_factor != 0) GeneratePokemon(last_pkmn, TypeFactors, team);
     }
-    return new_pokemon;
+    return new_pkmn;
 }
 
 static struct Pkmn *CreateTeam(void)
 {
+    u8 i;
     u8* type_factors;
     struct Pkmn first;
     struct Pkmn second;
@@ -86,24 +98,25 @@ static struct Pkmn *CreateTeam(void)
     struct Pkmn sixth;
     struct Pkmn *team;
     type_factors = InitTypeFactors();
-    first = GeneratePokemon(NULL, type_factors);
-    UpdateTypeFactors(first, type_factors);
-    second = GeneratePokemon(&first, type_factors);
-    UpdateTypeFactors(second, type_factors);
-    third = GeneratePokemon(&second, type_factors);
-    UpdateTypeFactors(third, type_factors);
-    fourth = GeneratePokemon(&third, type_factors);
-    UpdateTypeFactors(fourth, type_factors);
-    fifth = GeneratePokemon(&fourth, type_factors);
-    UpdateTypeFactors(fifth, type_factors);
-    sixth = GeneratePokemon(&fifth, type_factors);
-    UpdateTypeFactors(sixth, type_factors);
     team = (struct Pkmn*)malloc(6 * sizeof(struct Pokemon));
+    for (i = 0; i < 6; i++) team[i] = NA_Pokemon;
+    first = GeneratePokemon(NULL, type_factors, team);
+    UpdateTypeFactors(first, type_factors);
     team[0] = first;
+    second = GeneratePokemon(&first, type_factors, team);
+    UpdateTypeFactors(second, type_factors);
     team[1] = second;
+    third = GeneratePokemon(&second, type_factors, team);
+    UpdateTypeFactors(third, type_factors);
     team[2] = third;
+    fourth = GeneratePokemon(&third, type_factors, team);
+    UpdateTypeFactors(fourth, type_factors);
     team[3] = fourth;
+    fifth = GeneratePokemon(&fourth, type_factors, team);
+    UpdateTypeFactors(fifth, type_factors);
     team[4] = fifth;
+    sixth = GeneratePokemon(&fifth, type_factors, team);
+    UpdateTypeFactors(sixth, type_factors);
     team[5] = sixth;
     free(type_factors);
     return team;
