@@ -104,6 +104,7 @@ static u16 GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
     const struct Move *move;
     u8 move_factor;
     move_factor = 1;
+    if (moveset[0] == MOVE_TRANSFORM) return MOVE_NONE;
     do {move = GetRandomMove(pkmn);}
     while (CheckForDuplicateMoves(move->name, moveset) == 1);
     if (moveset[0] == MOVE_NONE)
@@ -112,7 +113,6 @@ static u16 GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
         if (move->strong != 2) move_factor += 31;
         if (move->lvlup == 0) move_factor += 15;
     }
-    else if (pkmn->species == SPECIES_DITTO) return MOVE_NONE;
     else if (moveset[1] == MOVE_NONE)
     {
         if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 31;
