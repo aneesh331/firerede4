@@ -21,7 +21,6 @@ static u16 ChooseThirdMove(const struct Move *pkmn_learnset, u16 *moveset);
 static u8 CheckForSleepInducingMove(u16 move_name);
 static u8 setSleepFlag(u16 *moveset);
 static u16 ChooseFourthMove(const struct Move *pkmn_learnset, u16 *moveset, u8 sleep);
-static u16 *GenerateMoveset(const struct Pkmn pkmn);
 
 static u8 *InitTypeFactors(void)
 {
@@ -236,36 +235,34 @@ static const struct Move *GetRandomMove(const struct Pkmn *pkmn)
 //     return moveset;
 // }
 
-static u16 *TempGenMoveset(const struct Pkmn *pkmn)
+static u16 *GenerateMoveset(const struct Pkmn *pkmn)
 {
     u8 i;
-    u16* moveset;
+    u16 *moveset;
     moveset = (u16*)malloc(4 * sizeof(u16));
-    moveset[0] = GetRandomMove(pkmn)->name;
-    moveset[1] = GetRandomMove(pkmn)->name;
-    moveset[2] = GetRandomMove(pkmn)->name;
-    moveset[3] = GetRandomMove(pkmn)->name;
+    for (i = 0; i < 4; i++) moveset[i] = GetRandomMove(pkmn)->name;
     return moveset;
 }
 
 void GenerateTeam(void)
 {
-    const struct Pkmn **team;
     u8 i;
-    u16 *moveset;
+    const struct Pkmn **team;
+    u16 **movesets;
     team = CreateTeam();
-    // // now to actually give pokemon to player:
     // ZeroPlayerPartyMons();
-    moveset = TempGenMoveset(team[0]);
+    movesets = (u16**)malloc(6 * sizeof(u16*));
     for (i = 0; i < 6; i++)
     {
+        movesets[i] = TempGenMoveset(team[i]);
         CreateMonWithNature(&gPlayerParty[i], team[i]->species, 50, USE_RANDOM_IVS, Random() % NUM_NATURES);
-        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[0]);
-        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[1]);
-        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[2]);
-        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[3]);
+        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][0]);
+        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][1]);
+        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][2]);
+        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][3]);
+        free(movesets[i]);
     }
     FlagSet(FLAG_SYS_POKEMON_GET);
     free(team);
-    free(moveset);
+    free(movesets);
 }
