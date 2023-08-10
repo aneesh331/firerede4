@@ -9,10 +9,8 @@ IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
     .string "Go for it!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck::
-    .string "From here on, you face the\n"
-    .string "ELITE FOUR one by one.\p"
-    .string "If you win, a door opens to the\n"
-    .string "next TRAINER. Good luck!$"
+    .string "You have been provided with a\n"
+    .string "team to take on the ELITE FOUR.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing::
     .string "I am so sorry, but you've wasted\n"

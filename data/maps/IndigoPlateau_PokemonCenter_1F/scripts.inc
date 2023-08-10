@@ -22,6 +22,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
 	specialvar VAR_RESULT, IsNationalPokedexEnabled
 	goto_if_eq VAR_RESULT, TRUE, IndigoPlateau_PokemonCenter_1F_EventScript_CheckSeviiIslandComplete
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck
+	callnative GenerateTeam
 	release
 	end
 

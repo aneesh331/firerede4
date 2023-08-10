@@ -1,6 +1,9 @@
 #include "_create_team.h"
 #include "malloc.h"
 #include "random.h"
+#include "pokemon.h"
+#include "event_data.h"
+#include "constants/flags.h"
 
 static u8 *InitTypeFactors(void);
 static void UpdateTypeFactors(const struct Pkmn pkmn, u8 *TypeFactors);
@@ -265,29 +268,21 @@ static u16 *GenerateMoveset(const struct Pkmn pkmn)
     return moveset;
 }
 
-u16 *GenerateTeam(void)
+void GenerateTeam(void)
 {
-    u16* team_with_moves;
     struct Pkmn *team;
-    u8 j;
     u8 i;
-    struct Pkmn team_member;
-    u16 *moveset;
+    // u16 *moveset;
     team = CreateTeam();
-    j = 0;
-    team_with_moves = (u16*)malloc(30 * sizeof(u16));
-    for (i =  0; i < 6; i++)
+    // // now to actually give pokemon to player:
+    // ZeroPlayerPartyMons();
+    for (i = 0; i < 6; i++)
     {
-        team_member = team[i];
-        team_with_moves[j] = team_member.species;
-        moveset = GenerateMoveset(team_member);
-        team_with_moves[j + 1] = moveset[0];
-        team_with_moves[j + 2] = moveset[1];
-        team_with_moves[j + 3] = moveset[2];
-        team_with_moves[j + 4] = moveset[3];
-        free(moveset);
-        j += 5;
+        // moveset = GenerateMoveset(team_member);
+        CreateMonWithNature(&gPlayerParty[i], team[i].species, 50, USE_RANDOM_IVS, Random() % NUM_NATURES);
+        // DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[i]);
+        // free(moveset);
     }
-    free(team);
-    return team_with_moves;
+    FlagSet(FLAG_SYS_POKEMON_GET);
+    // free(team);
 }
