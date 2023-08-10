@@ -3,8 +3,7 @@ EventScript_AfterWhiteOutHeal::
 	textcolor NPC_TEXT_COLOR_FEMALE
 	msgbox Text_FirstShouldRestoreMonsHealth
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
-	call_if_unset FLAG_DEFEATED_BROCK, EventScript_AfterWhiteOutHealMsgPreBrock
-	call_if_set FLAG_DEFEATED_BROCK, EventScript_AfterWhiteOutHealMsg
+	call EventScript_AfterWhiteOutHealMsg
 	applymovement VAR_LAST_TALKED, Movement_Bow
 	waitmovement 0
 	fadedefaultbgm

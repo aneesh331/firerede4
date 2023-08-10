@@ -19,10 +19,41 @@ IndigoPlateau_PokemonCenter_1F_EventScript_CheckBlockDoor::
 IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
 	lock
 	faceplayer
-	specialvar VAR_RESULT, IsNationalPokedexEnabled
-	goto_if_eq VAR_RESULT, TRUE, IndigoPlateau_PokemonCenter_1F_EventScript_CheckSeviiIslandComplete
-	msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck
+	goto_if_set FLAG_SYS_POKEMON_GET, IndigoPlateau_PokemonCenter_1F_EventScript_SwitchOutTeam
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_WelcomeToTheEliteFour
+	multichoice 19, 8, MULTICHOICE_YES_NO, FALSE | (TRUE << 1)
+	switch VAR_RESULT
+	case 0, IndigoPlateau_PokemonCenter_1F_EventScript_GenerateTeam
+	case 1, IndigoPlateau_PokemonCenter_1F_EventScript_SpeakWithTheClerk
+	case SCR_MENU_CANCEL, IndigoPlateau_PokemonCenter_1F_EventScript_SpeakWithTheClerk
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_SpeakWithTheClerk::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_SpeakWithTheClerk
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_GenerateTeam::
 	callnative GenerateTeam
+	setflag FLAG_0x0AF
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_ThereYouGo
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_SwitchOutTeam::
+	goto_if_set FLAG_0x0AF, IndigoPlateau_PokemonCenter_1F_EventScript_YouShouldTry
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_SwitchOutTeam
+	multichoice 19, 8, MULTICHOICE_YES_NO, FALSE | (TRUE << 1)
+	switch VAR_RESULT
+	case 0, IndigoPlateau_PokemonCenter_1F_EventScript_GenerateTeam
+	case 1, IndigoPlateau_PokemonCenter_1F_EventScript_SpeakWithTheClerk
+	case SCR_MENU_CANCEL, IndigoPlateau_PokemonCenter_1F_EventScript_SpeakWithTheClerk
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_YouShouldTry::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_YouShouldTry
 	release
 	end
 
@@ -33,7 +64,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_CheckSeviiIslandComplete::
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_SeviiIslandComplete::
-	msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_WelcomeToTheEliteFour
 	release
 	end
 

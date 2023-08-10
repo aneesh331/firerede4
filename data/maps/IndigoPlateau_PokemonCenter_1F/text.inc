@@ -8,9 +8,28 @@ IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
     .string "This is it!\n"
     .string "Go for it!$"
 
-IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck::
-    .string "You have been provided with a\n"
-    .string "team to take on the ELITE FOUR.$"
+IndigoPlateau_PokemonCenter_1F_Text_WelcomeToTheEliteFour::
+    .string "Welcome to the ELITE FOUR! Would\n"
+    .string "you like to take on the challenge?$"
+
+IndigoPlateau_PokemonCenter_1F_Text_SpeakWithTheClerk::
+    .string "Please speak with the clerk if you\n"
+    .string "have any questions.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_ThereYouGo::
+    .string "There you go. Check your\n"
+    .string "POKéMON. Good luck!$"
+
+IndigoPlateau_PokemonCenter_1F_Text_SwitchOutTeam::
+    .string "Welcome back! Would you like\n"
+    .string "to switch out your POKéMON?$"
+
+IndigoPlateau_PokemonCenter_1F_Text_YouShouldTry::
+    .string "You should attempt the challenge\n"
+    .string "at least once with that team\p"
+    .string "before switching it out.\n"
+    .string "Sometimes your POKéMON will\p"
+    .string "surprise you with their power!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing::
     .string "I am so sorry, but you've wasted\n"
