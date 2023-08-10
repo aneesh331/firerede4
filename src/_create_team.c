@@ -12,8 +12,8 @@ static u8 GetBSTFactor(const struct Pkmn *pkmn, const struct Pkmn *last_pkmn);
 static u8 CheckForDuplicatePokemon(const struct Pkmn *new_pkmn, const struct Pkmn **team);
 static const struct Pkmn *GeneratePokemon(u8 slot, u8 *TypeFactors, const struct Pkmn **team);
 static const struct Pkmn **CreateTeam(void);
+static const struct Move *GetRandomMove(const struct Pkmn *pkmn);
 
-static const struct Move GetRandomMove(const struct Move *pkmn_learnset);
 static u8 CheckForDuplicateMoves(u16 move_name, u16 *moveset);
 static const struct Move ChooseFirstMove(u8 type_1, u8 type_2, const struct Move *pkmn_learnset);
 static u16 ChooseSecondMove(u8 type_1, u8 type_2, const struct Move *pkmn_learnset, u16 *moveset, u8 move_1_type);
@@ -93,10 +93,10 @@ static const struct Pkmn **CreateTeam(void)
     return team;
 }
 
-// static const struct Move GetRandomMove(const struct Move *pkmn_learnset)
-// {
-//     return pkmn_learnset[Random() % ARRAY_COUNT(pkmn_learnset)];
-// }
+static const struct Move *GetRandomMove(const struct Pkmn *pkmn)
+{
+    return &pkmn->moves[Random() % pkmn->num_moves];
+}
 
 // static u8 CheckForDuplicateMoves(u16 move_name, u16 *moveset)
 // {
@@ -236,38 +236,36 @@ static const struct Pkmn **CreateTeam(void)
 //     return moveset;
 // }
 
-// static u16 *TempGenMoveset(struct Pkmn pkmn)
-// {
-//     u16* moveset;
-//     const struct Move *pkmn_learnset;
-//     u8 i;
-//     pkmn_learnset = pkmn.moves;
-//     moveset = (u16*)malloc(4 * sizeof(u16));
-//     for (i = 0; i < 4; i++)
-//     {
-//         moveset[i] = pkmn_learnset[Random() % ARRAY_COUNT(pkmn_learnset)].name;
-//     }
-//     return moveset;
-// }
+static u16 *TempGenMoveset(const struct Pkmn *pkmn)
+{
+    u8 i;
+    u16* moveset;
+    moveset = (u16*)malloc(4 * sizeof(u16));
+    moveset[0] = GetRandomMove(pkmn)->name;
+    moveset[1] = GetRandomMove(pkmn)->name;
+    moveset[2] = GetRandomMove(pkmn)->name;
+    moveset[3] = GetRandomMove(pkmn)->name;
+    return moveset;
+}
 
 void GenerateTeam(void)
 {
     const struct Pkmn **team;
     u8 i;
-    //u16 *moveset;
+    u16 *moveset;
     team = CreateTeam();
     // // now to actually give pokemon to player:
     // ZeroPlayerPartyMons();
-    //moveset = TempGenMoveset(team[0]);
+    moveset = TempGenMoveset(team[0]);
     for (i = 0; i < 6; i++)
     {
         CreateMonWithNature(&gPlayerParty[i], team[i]->species, 50, USE_RANDOM_IVS, Random() % NUM_NATURES);
-        // DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[0]);
-        // DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[1]);
-        // DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[2]);
-        // DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[3]);
+        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[0]);
+        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[1]);
+        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[2]);
+        DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], moveset[3]);
     }
     FlagSet(FLAG_SYS_POKEMON_GET);
     free(team);
-    // free(moveset);
+    free(moveset);
 }

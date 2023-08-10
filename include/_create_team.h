@@ -23,6 +23,7 @@ struct Pkmn
     u8 type_2;
     u16 bst;
     const struct Move *moves;
+	u8 num_moves;
 };
 
 void GenerateTeam(void);
@@ -7582,7 +7583,7 @@ const struct Move Magneton_Moves[] = {
 	[19] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[20] = {
@@ -7600,7 +7601,7 @@ const struct Move Magneton_Moves[] = {
 	[22] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
-		.strong = 1,
+		.strong = 2,
 		.lvlup = 0
 	},
 	[23] = {
@@ -9100,7 +9101,7 @@ const struct Move Hypno_Moves[] = {
 	[5] = {
 		.name = MOVE_HEADBUTT,
 		.type = TYPE_NORMAL,
-		.strong = 1,
+		.strong = 2,
 		.lvlup = 1
 	},
 	[6] = {
@@ -9310,7 +9311,7 @@ const struct Move Hypno_Moves[] = {
 	[40] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[41] = {
@@ -9427,7 +9428,7 @@ const struct Move Kingler_Moves[] = {
 	[12] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[13] = {
@@ -9559,7 +9560,7 @@ const struct Move Kingler_Moves[] = {
 	[34] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
-		.strong = 1,
+		.strong = 2,
 		.lvlup = 0
 	},
 };
@@ -10837,7 +10838,7 @@ const struct Move Lickitung_Moves[] = {
 	[23] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
-		.strong = 1,
+		.strong = 2,
 		.lvlup = 0
 	},
 	[24] = {
@@ -10993,7 +10994,7 @@ const struct Move Lickitung_Moves[] = {
 	[49] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[50] = {
@@ -17820,553 +17821,632 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_1 = TYPE_GRASS,
 		.type_2 = TYPE_POISON,
 		.bst = 525,
-		.moves = Venusaur_Moves
+		.moves = Venusaur_Moves,
+		.num_moves = 33
 	},
 	[1] = {
 		.species = SPECIES_CHARIZARD,
 		.type_1 = TYPE_FIRE,
 		.type_2 = TYPE_FLYING,
 		.bst = 534,
-		.moves = Charizard_Moves
+		.moves = Charizard_Moves,
+		.num_moves = 46
 	},
 	[2] = {
 		.species = SPECIES_BLASTOISE,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_WATER,
 		.bst = 530,
-		.moves = Blastoise_Moves
+		.moves = Blastoise_Moves,
+		.num_moves = 42
 	},
 	[3] = {
 		.species = SPECIES_BUTTERFREE,
 		.type_1 = TYPE_BUG,
 		.type_2 = TYPE_FLYING,
 		.bst = 385,
-		.moves = Butterfree_Moves
+		.moves = Butterfree_Moves,
+		.num_moves = 35
 	},
 	[4] = {
 		.species = SPECIES_BEEDRILL,
 		.type_1 = TYPE_BUG,
 		.type_2 = TYPE_POISON,
 		.bst = 385,
-		.moves = Beedrill_Moves
+		.moves = Beedrill_Moves,
+		.num_moves = 29
 	},
 	[5] = {
 		.species = SPECIES_PIDGEOT,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_FLYING,
 		.bst = 469,
-		.moves = Pidgeot_Moves
+		.moves = Pidgeot_Moves,
+		.num_moves = 27
 	},
 	[6] = {
 		.species = SPECIES_RATICATE,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 413,
-		.moves = Raticate_Moves
+		.moves = Raticate_Moves,
+		.num_moves = 39
 	},
 	[7] = {
 		.species = SPECIES_FEAROW,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_FLYING,
 		.bst = 442,
-		.moves = Fearow_Moves
+		.moves = Fearow_Moves,
+		.num_moves = 27
 	},
 	[8] = {
 		.species = SPECIES_ARBOK,
 		.type_1 = TYPE_POISON,
 		.type_2 = TYPE_POISON,
 		.bst = 438,
-		.moves = Arbok_Moves
+		.moves = Arbok_Moves,
+		.num_moves = 34
 	},
 	[9] = {
 		.species = SPECIES_RAICHU,
 		.type_1 = TYPE_ELECTRIC,
 		.type_2 = TYPE_ELECTRIC,
 		.bst = 475,
-		.moves = Raichu_Moves
+		.moves = Raichu_Moves,
+		.num_moves = 35
 	},
 	[10] = {
 		.species = SPECIES_SANDSLASH,
 		.type_1 = TYPE_GROUND,
 		.type_2 = TYPE_GROUND,
 		.bst = 450,
-		.moves = Sandslash_Moves
+		.moves = Sandslash_Moves,
+		.num_moves = 36
 	},
 	[11] = {
 		.species = SPECIES_NIDOQUEEN,
 		.type_1 = TYPE_POISON,
 		.type_2 = TYPE_GROUND,
 		.bst = 495,
-		.moves = Nidoqueen_Moves
+		.moves = Nidoqueen_Moves,
+		.num_moves = 51
 	},
 	[12] = {
 		.species = SPECIES_NIDOKING,
 		.type_1 = TYPE_POISON,
 		.type_2 = TYPE_GROUND,
 		.bst = 495,
-		.moves = Nidoking_Moves
+		.moves = Nidoking_Moves,
+		.num_moves = 50
 	},
 	[13] = {
 		.species = SPECIES_CLEFABLE,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 473,
-		.moves = Clefable_Moves
+		.moves = Clefable_Moves,
+		.num_moves = 49
 	},
 	[14] = {
 		.species = SPECIES_NINETALES,
 		.type_1 = TYPE_FIRE,
 		.type_2 = TYPE_FIRE,
 		.bst = 505,
-		.moves = Ninetales_Moves
+		.moves = Ninetales_Moves,
+		.num_moves = 26
 	},
 	[15] = {
 		.species = SPECIES_WIGGLYTUFF,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 425,
-		.moves = Wigglytuff_Moves
+		.moves = Wigglytuff_Moves,
+		.num_moves = 45
 	},
 	[16] = {
 		.species = SPECIES_GOLBAT,
 		.type_1 = TYPE_POISON,
 		.type_2 = TYPE_FLYING,
 		.bst = 455,
-		.moves = Golbat_Moves
+		.moves = Golbat_Moves,
+		.num_moves = 33
 	},
 	[17] = {
 		.species = SPECIES_VILEPLUME,
 		.type_1 = TYPE_GRASS,
 		.type_2 = TYPE_POISON,
 		.bst = 480,
-		.moves = Vileplume_Moves
+		.moves = Vileplume_Moves,
+		.num_moves = 24
 	},
 	[18] = {
 		.species = SPECIES_PARASECT,
 		.type_1 = TYPE_BUG,
 		.type_2 = TYPE_GRASS,
 		.bst = 405,
-		.moves = Parasect_Moves
+		.moves = Parasect_Moves,
+		.num_moves = 31
 	},
 	[19] = {
 		.species = SPECIES_VENOMOTH,
 		.type_1 = TYPE_BUG,
 		.type_2 = TYPE_POISON,
 		.bst = 450,
-		.moves = Venomoth_Moves
+		.moves = Venomoth_Moves,
+		.num_moves = 33
 	},
 	[20] = {
 		.species = SPECIES_DUGTRIO,
 		.type_1 = TYPE_GROUND,
 		.type_2 = TYPE_GROUND,
 		.bst = 405,
-		.moves = Dugtrio_Moves
+		.moves = Dugtrio_Moves,
+		.num_moves = 32
 	},
 	[21] = {
 		.species = SPECIES_PERSIAN,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 440,
-		.moves = Persian_Moves
+		.moves = Persian_Moves,
+		.num_moves = 39
 	},
 	[22] = {
 		.species = SPECIES_GOLDUCK,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_WATER,
 		.bst = 500,
-		.moves = Golduck_Moves
+		.moves = Golduck_Moves,
+		.num_moves = 41
 	},
 	[23] = {
 		.species = SPECIES_PRIMEAPE,
 		.type_1 = TYPE_FIGHTING,
 		.type_2 = TYPE_FIGHTING,
 		.bst = 455,
-		.moves = Primeape_Moves
+		.moves = Primeape_Moves,
+		.num_moves = 46
 	},
 	[24] = {
 		.species = SPECIES_ARCANINE,
 		.type_1 = TYPE_FIRE,
 		.type_2 = TYPE_FIRE,
 		.bst = 555,
-		.moves = Arcanine_Moves
+		.moves = Arcanine_Moves,
+		.num_moves = 29
 	},
 	[25] = {
 		.species = SPECIES_POLIWRATH,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_FIGHTING,
 		.bst = 500,
-		.moves = Poliwrath_Moves
+		.moves = Poliwrath_Moves,
+		.num_moves = 39
 	},
 	[26] = {
 		.species = SPECIES_ALAKAZAM,
 		.type_1 = TYPE_PSYCHIC,
 		.type_2 = TYPE_PSYCHIC,
 		.bst = 490,
-		.moves = Alakazam_Moves
+		.moves = Alakazam_Moves,
+		.num_moves = 48
 	},
 	[27] = {
 		.species = SPECIES_MACHAMP,
 		.type_1 = TYPE_FIGHTING,
 		.type_2 = TYPE_FIGHTING,
 		.bst = 505,
-		.moves = Machamp_Moves
+		.moves = Machamp_Moves,
+		.num_moves = 42
 	},
 	[28] = {
 		.species = SPECIES_VICTREEBEL,
 		.type_1 = TYPE_GRASS,
 		.type_2 = TYPE_POISON,
 		.bst = 480,
-		.moves = Victreebel_Moves
+		.moves = Victreebel_Moves,
+		.num_moves = 27
 	},
 	[29] = {
 		.species = SPECIES_TENTACRUEL,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_POISON,
 		.bst = 515,
-		.moves = Tentacruel_Moves
+		.moves = Tentacruel_Moves,
+		.num_moves = 31
 	},
 	[30] = {
 		.species = SPECIES_GOLEM,
 		.type_1 = TYPE_ROCK,
 		.type_2 = TYPE_GROUND,
 		.bst = 485,
-		.moves = Golem_Moves
+		.moves = Golem_Moves,
+		.num_moves = 41
 	},
 	[31] = {
 		.species = SPECIES_RAPIDASH,
 		.type_1 = TYPE_FIRE,
 		.type_2 = TYPE_FIRE,
 		.bst = 500,
-		.moves = Rapidash_Moves
+		.moves = Rapidash_Moves,
+		.num_moves = 30
 	},
 	[32] = {
 		.species = SPECIES_SLOWBRO,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_PSYCHIC,
 		.bst = 490,
-		.moves = Slowbro_Moves
+		.moves = Slowbro_Moves,
+		.num_moves = 53
 	},
 	[33] = {
 		.species = SPECIES_MAGNETON,
 		.type_1 = TYPE_ELECTRIC,
 		.type_2 = TYPE_STEEL,
 		.bst = 465,
-		.moves = Magneton_Moves
+		.moves = Magneton_Moves,
+		.num_moves = 29
 	},
 	[34] = {
 		.species = SPECIES_FARFETCHD,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_FLYING,
 		.bst = 352,
-		.moves = Farfetchd_Moves
+		.moves = Farfetchd_Moves,
+		.num_moves = 29
 	},
 	[35] = {
 		.species = SPECIES_DODRIO,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_FLYING,
 		.bst = 460,
-		.moves = Dodrio_Moves
+		.moves = Dodrio_Moves,
+		.num_moves = 28
 	},
 	[36] = {
 		.species = SPECIES_DEWGONG,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_ICE,
 		.bst = 475,
-		.moves = Dewgong_Moves
+		.moves = Dewgong_Moves,
+		.num_moves = 30
 	},
 	[37] = {
 		.species = SPECIES_MUK,
 		.type_1 = TYPE_POISON,
 		.type_2 = TYPE_POISON,
 		.bst = 500,
-		.moves = Muk_Moves
+		.moves = Muk_Moves,
+		.num_moves = 39
 	},
 	[38] = {
 		.species = SPECIES_CLOYSTER,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_ICE,
 		.bst = 525,
-		.moves = Cloyster_Moves
+		.moves = Cloyster_Moves,
+		.num_moves = 28
 	},
 	[39] = {
 		.species = SPECIES_GENGAR,
 		.type_1 = TYPE_GHOST,
 		.type_2 = TYPE_POISON,
 		.bst = 500,
-		.moves = Gengar_Moves
+		.moves = Gengar_Moves,
+		.num_moves = 45
 	},
 	[40] = {
 		.species = SPECIES_ONIX,
 		.type_1 = TYPE_ROCK,
 		.type_2 = TYPE_GROUND,
 		.bst = 385,
-		.moves = Onix_Moves
+		.moves = Onix_Moves,
+		.num_moves = 35
 	},
 	[41] = {
 		.species = SPECIES_HYPNO,
 		.type_1 = TYPE_PSYCHIC,
 		.type_2 = TYPE_PSYCHIC,
 		.bst = 483,
-		.moves = Hypno_Moves
+		.moves = Hypno_Moves,
+		.num_moves = 47
 	},
 	[42] = {
 		.species = SPECIES_KINGLER,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_WATER,
 		.bst = 475,
-		.moves = Kingler_Moves
+		.moves = Kingler_Moves,
+		.num_moves = 35
 	},
 	[43] = {
 		.species = SPECIES_ELECTRODE,
 		.type_1 = TYPE_ELECTRIC,
 		.type_2 = TYPE_ELECTRIC,
 		.bst = 480,
-		.moves = Electrode_Moves
+		.moves = Electrode_Moves,
+		.num_moves = 31
 	},
 	[44] = {
 		.species = SPECIES_EXEGGUTOR,
 		.type_1 = TYPE_GRASS,
 		.type_2 = TYPE_PSYCHIC,
 		.bst = 520,
-		.moves = Exeggutor_Moves
+		.moves = Exeggutor_Moves,
+		.num_moves = 31
 	},
 	[45] = {
 		.species = SPECIES_MAROWAK,
 		.type_1 = TYPE_GROUND,
 		.type_2 = TYPE_GROUND,
 		.bst = 425,
-		.moves = Marowak_Moves
+		.moves = Marowak_Moves,
+		.num_moves = 44
 	},
 	[46] = {
 		.species = SPECIES_HITMONLEE,
 		.type_1 = TYPE_FIGHTING,
 		.type_2 = TYPE_FIGHTING,
 		.bst = 455,
-		.moves = Hitmonlee_Moves
+		.moves = Hitmonlee_Moves,
+		.num_moves = 40
 	},
 	[47] = {
 		.species = SPECIES_HITMONCHAN,
 		.type_1 = TYPE_FIGHTING,
 		.type_2 = TYPE_FIGHTING,
 		.bst = 455,
-		.moves = Hitmonchan_Moves
+		.moves = Hitmonchan_Moves,
+		.num_moves = 40
 	},
 	[48] = {
 		.species = SPECIES_LICKITUNG,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 385,
-		.moves = Lickitung_Moves
+		.moves = Lickitung_Moves,
+		.num_moves = 52
 	},
 	[49] = {
 		.species = SPECIES_WEEZING,
 		.type_1 = TYPE_POISON,
 		.type_2 = TYPE_POISON,
 		.bst = 490,
-		.moves = Weezing_Moves
+		.moves = Weezing_Moves,
+		.num_moves = 33
 	},
 	[50] = {
 		.species = SPECIES_RHYDON,
 		.type_1 = TYPE_GROUND,
 		.type_2 = TYPE_ROCK,
 		.bst = 485,
-		.moves = Rhydon_Moves
+		.moves = Rhydon_Moves,
+		.num_moves = 48
 	},
 	[51] = {
 		.species = SPECIES_CHANSEY,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 450,
-		.moves = Chansey_Moves
+		.moves = Chansey_Moves,
+		.num_moves = 60
 	},
 	[52] = {
 		.species = SPECIES_TANGELA,
 		.type_1 = TYPE_GRASS,
 		.type_2 = TYPE_GRASS,
 		.bst = 435,
-		.moves = Tangela_Moves
+		.moves = Tangela_Moves,
+		.num_moves = 33
 	},
 	[53] = {
 		.species = SPECIES_KANGASKHAN,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 490,
-		.moves = Kangaskhan_Moves
+		.moves = Kangaskhan_Moves,
+		.num_moves = 55
 	},
 	[54] = {
 		.species = SPECIES_SEADRA,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_WATER,
 		.bst = 440,
-		.moves = Seadra_Moves
+		.moves = Seadra_Moves,
+		.num_moves = 26
 	},
 	[55] = {
 		.species = SPECIES_SEAKING,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_WATER,
 		.bst = 450,
-		.moves = Seaking_Moves
+		.moves = Seaking_Moves,
+		.num_moves = 29
 	},
 	[56] = {
 		.species = SPECIES_STARMIE,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_PSYCHIC,
 		.bst = 520,
-		.moves = Starmie_Moves
+		.moves = Starmie_Moves,
+		.num_moves = 33
 	},
 	[57] = {
 		.species = SPECIES_MR_MIME,
 		.type_1 = TYPE_PSYCHIC,
 		.type_2 = TYPE_PSYCHIC,
 		.bst = 460,
-		.moves = Mr_Mime_Moves
+		.moves = Mr_Mime_Moves,
+		.num_moves = 56
 	},
 	[58] = {
 		.species = SPECIES_SCYTHER,
 		.type_1 = TYPE_BUG,
 		.type_2 = TYPE_FLYING,
 		.bst = 500,
-		.moves = Scyther_Moves
+		.moves = Scyther_Moves,
+		.num_moves = 32
 	},
 	[59] = {
 		.species = SPECIES_JYNX,
 		.type_1 = TYPE_ICE,
 		.type_2 = TYPE_PSYCHIC,
 		.bst = 455,
-		.moves = Jynx_Moves
+		.moves = Jynx_Moves,
+		.num_moves = 44
 	},
 	[60] = {
 		.species = SPECIES_ELECTABUZZ,
 		.type_1 = TYPE_ELECTRIC,
 		.type_2 = TYPE_ELECTRIC,
 		.bst = 490,
-		.moves = Electabuzz_Moves
+		.moves = Electabuzz_Moves,
+		.num_moves = 38
 	},
 	[61] = {
 		.species = SPECIES_MAGMAR,
 		.type_1 = TYPE_FIRE,
 		.type_2 = TYPE_FIRE,
 		.bst = 495,
-		.moves = Magmar_Moves
+		.moves = Magmar_Moves,
+		.num_moves = 35
 	},
 	[62] = {
 		.species = SPECIES_PINSIR,
 		.type_1 = TYPE_BUG,
 		.type_2 = TYPE_BUG,
 		.bst = 500,
-		.moves = Pinsir_Moves
+		.moves = Pinsir_Moves,
+		.num_moves = 37
 	},
 	[63] = {
 		.species = SPECIES_TAUROS,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 490,
-		.moves = Tauros_Moves
+		.moves = Tauros_Moves,
+		.num_moves = 40
 	},
 	[64] = {
 		.species = SPECIES_GYARADOS,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_FLYING,
 		.bst = 540,
-		.moves = Gyarados_Moves
+		.moves = Gyarados_Moves,
+		.num_moves = 40
 	},
 	[65] = {
 		.species = SPECIES_LAPRAS,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_ICE,
 		.bst = 535,
-		.moves = Lapras_Moves
+		.moves = Lapras_Moves,
+		.num_moves = 41
 	},
 	[66] = {
 		.species = SPECIES_DITTO,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 288,
-		.moves = Ditto_Moves
+		.moves = Ditto_Moves,
+		.num_moves = 1
 	},
 	[67] = {
 		.species = SPECIES_VAPOREON,
 		.type_1 = TYPE_WATER,
 		.type_2 = TYPE_WATER,
 		.bst = 525,
-		.moves = Vaporeon_Moves
+		.moves = Vaporeon_Moves,
+		.num_moves = 35
 	},
 	[68] = {
 		.species = SPECIES_JOLTEON,
 		.type_1 = TYPE_ELECTRIC,
 		.type_2 = TYPE_ELECTRIC,
 		.bst = 525,
-		.moves = Jolteon_Moves
+		.moves = Jolteon_Moves,
+		.num_moves = 34
 	},
 	[69] = {
 		.species = SPECIES_FLAREON,
 		.type_1 = TYPE_FIRE,
 		.type_2 = TYPE_FIRE,
 		.bst = 525,
-		.moves = Flareon_Moves
+		.moves = Flareon_Moves,
+		.num_moves = 32
 	},
 	[70] = {
 		.species = SPECIES_PORYGON,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 395,
-		.moves = Porygon_Moves
+		.moves = Porygon_Moves,
+		.num_moves = 39
 	},
 	[71] = {
 		.species = SPECIES_OMASTAR,
 		.type_1 = TYPE_ROCK,
 		.type_2 = TYPE_WATER,
 		.bst = 495,
-		.moves = Omastar_Moves
+		.moves = Omastar_Moves,
+		.num_moves = 35
 	},
 	[72] = {
 		.species = SPECIES_KABUTOPS,
 		.type_1 = TYPE_ROCK,
 		.type_2 = TYPE_WATER,
 		.bst = 495,
-		.moves = Kabutops_Moves
+		.moves = Kabutops_Moves,
+		.num_moves = 42
 	},
 	[73] = {
 		.species = SPECIES_AERODACTYL,
 		.type_1 = TYPE_ROCK,
 		.type_2 = TYPE_FLYING,
 		.bst = 515,
-		.moves = Aerodactyl_Moves
+		.moves = Aerodactyl_Moves,
+		.num_moves = 40
 	},
 	[74] = {
 		.species = SPECIES_SNORLAX,
 		.type_1 = TYPE_NORMAL,
 		.type_2 = TYPE_NORMAL,
 		.bst = 540,
-		.moves = Snorlax_Moves
+		.moves = Snorlax_Moves,
+		.num_moves = 52
 	},
 	[75] = {
 		.species = SPECIES_ARTICUNO,
 		.type_1 = TYPE_ICE,
 		.type_2 = TYPE_FLYING,
 		.bst = 580,
-		.moves = Articuno_Moves
+		.moves = Articuno_Moves,
+		.num_moves = 31
 	},
 	[76] = {
 		.species = SPECIES_ZAPDOS,
 		.type_1 = TYPE_ELECTRIC,
 		.type_2 = TYPE_FLYING,
 		.bst = 580,
-		.moves = Zapdos_Moves
+		.moves = Zapdos_Moves,
+		.num_moves = 32
 	},
 	[77] = {
 		.species = SPECIES_MOLTRES,
 		.type_1 = TYPE_FIRE,
 		.type_2 = TYPE_FLYING,
 		.bst = 580,
-		.moves = Moltres_Moves
+		.moves = Moltres_Moves,
+		.num_moves = 30
 	},
 	[78] = {
 		.species = SPECIES_DRAGONAIR,
 		.type_1 = TYPE_DRAGON,
 		.type_2 = TYPE_DRAGON,
 		.bst = 420,
-		.moves = Dragonair_Moves
+		.moves = Dragonair_Moves,
+		.num_moves = 36
 	},
 };
 
@@ -18375,7 +18455,8 @@ const struct Pkmn NA_Pokemon = {
 	.type_1 = TYPE_NONE,
 	.type_2 = TYPE_NONE,
 	.bst = 0,
-	.moves = NULL
+	.moves = NULL,
+	.num_moves = 0
 };
 
 #endif
