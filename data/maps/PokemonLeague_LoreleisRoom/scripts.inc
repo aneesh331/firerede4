@@ -66,6 +66,7 @@ PokemonLeague_LoreleisRoom_EventScript_Lorelei::
 
 PokemonLeague_LoreleisRoom_EventScript_Intro::
 	msgbox PokemonLeague_LoreleisRoom_Text_Intro
+	clearflag FLAG_0x0AF
 	return
 
 PokemonLeague_LoreleisRoom_EventScript_RematchIntro::

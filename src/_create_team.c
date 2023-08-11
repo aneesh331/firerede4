@@ -148,7 +148,7 @@ void GenerateTeam(void)
     const struct Pkmn **team;
     u16 **movesets;
     team = CreateTeam();
-    // ZeroPlayerPartyMons();
+    ZeroPlayerPartyMons();
     movesets = (u16**)malloc(6 * sizeof(u16*));
     for (i = 0; i < 6; i++)
     {
