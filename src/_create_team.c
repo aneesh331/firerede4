@@ -104,7 +104,6 @@ static const struct Move *GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
     const struct Move *move;
     u8 move_factor;
     move_factor = 1;
-    if (moveset[0] == MOVE_TRANSFORM) return MOVE_NONE;
     do {move = GetRandomMove(pkmn);}
     while (CheckForDuplicateMoves(move->name, moveset) == 1);
     if (moveset[0] == MOVE_NONE)
@@ -153,7 +152,8 @@ void GenerateTeam(void)
     for (i = 0; i < 6; i++)
     {
         movesets[i] = GenerateMoveset(team[i]);
-        CreateMonWithNature(&gPlayerParty[i], team[i]->species, 55, USE_RANDOM_IVS, Random() % NUM_NATURES);
+        CreateMonWithNature(&gPlayerParty[i], team[i]->species, 100, USE_RANDOM_IVS, Random() % NUM_NATURES);
+        if (team[i]->species == SPECIES_DITTO) continue;
         DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][0]);
         DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][1]);
         DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][2]);
