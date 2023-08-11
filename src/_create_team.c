@@ -14,7 +14,7 @@ static const struct Pkmn *GeneratePokemon(u8 slot, u8 *TypeFactors, const struct
 static const struct Pkmn **CreateTeam(void);
 static const struct Move *GetRandomMove(const struct Pkmn *pkmn);
 static u8 CheckForDuplicateMoves(u16 move_name, u16 *moveset);
-static u16 GenerateMove(const struct Pkmn *pkmn, u16 *moveset);
+static const struct Move *GenerateMove(const struct Pkmn *pkmn, u16 *moveset);
 static u16 *GenerateMoveset(const struct Pkmn *pkmn);
 
 static u8 *InitTypeFactors(void)
@@ -68,7 +68,7 @@ static const struct Pkmn *GeneratePokemon(u8 slot, u8 *TypeFactors, const struct
         do {new_pkmn = &Pokemon_List[Random() % ARRAY_COUNT(Pokemon_List)];}
         while (CheckForDuplicatePokemon(new_pkmn, team) == 1);
         new_pkmn_factor = GetTypeFactor(new_pkmn, TypeFactors) + GetBSTFactor(new_pkmn, team[slot - 1]);
-        if (Random() % new_pkmn_factor != 0) GeneratePokemon(slot, TypeFactors, team);
+        if (Random() % new_pkmn_factor != 0) new_pkmn = GeneratePokemon(slot, TypeFactors, team);
     }
     UpdateTypeFactors(new_pkmn, TypeFactors);
     return new_pkmn;
@@ -99,7 +99,7 @@ static u8 CheckForDuplicateMoves(u16 move_name, u16 *moveset)
     return 0;
 }
 
-static u16 GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
+static const struct Move *GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
 {
     const struct Move *move;
     u8 move_factor;
@@ -109,7 +109,6 @@ static u16 GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
     while (CheckForDuplicateMoves(move->name, moveset) == 1);
     if (moveset[0] == MOVE_NONE)
     {
-        if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 31;
         if (move->strong != 2) move_factor += 31;
         if (move->lvlup == 0) move_factor += 15;
     }
@@ -126,11 +125,11 @@ static u16 GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
     }
     else if (moveset[3] == MOVE_NONE)
     {
-        if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 15;
+        if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 31;
         if (move->lvlup == 0) move_factor += 15;
     }
-    if (Random() % move_factor != 0) GenerateMove(pkmn, moveset);
-    return move->name;
+    if (Random() % move_factor != 0) move = GenerateMove(pkmn, moveset);
+    return move;
 }
 
 static u16 *GenerateMoveset(const struct Pkmn *pkmn)
@@ -139,7 +138,7 @@ static u16 *GenerateMoveset(const struct Pkmn *pkmn)
     u16 *moveset;
     moveset = (u16*)malloc(4 * sizeof(u16));
     for (i = 0; i < 4; i++) moveset[i] = MOVE_NONE;
-    for (i = 0; i < 4; i++) moveset[i] = GenerateMove(pkmn, moveset);
+    for (i = 0; i < 4; i++) moveset[i] = GenerateMove(pkmn, moveset)->name;
     return moveset;
 }
 
@@ -154,7 +153,7 @@ void GenerateTeam(void)
     for (i = 0; i < 6; i++)
     {
         movesets[i] = GenerateMoveset(team[i]);
-        CreateMonWithNature(&gPlayerParty[i], team[i]->species, 50, USE_RANDOM_IVS, Random() % NUM_NATURES);
+        CreateMonWithNature(&gPlayerParty[i], team[i]->species, 55, USE_RANDOM_IVS, Random() % NUM_NATURES);
         DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][0]);
         DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][1]);
         DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][2]);

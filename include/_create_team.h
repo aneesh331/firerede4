@@ -23,7 +23,7 @@ struct Pkmn
     u8 type_2;
     u16 bst;
     const struct Move *moves;
-	u8 num_moves;
+    u8 num_moves;
 };
 
 void GenerateTeam(void);
@@ -68,7 +68,7 @@ const struct Move Venusaur_Moves[] = {
 	[6] = {
 		.name = MOVE_RAZOR_LEAF,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[7] = {
@@ -84,144 +84,150 @@ const struct Move Venusaur_Moves[] = {
 		.lvlup = 1
 	},
 	[9] = {
+		.name = MOVE_SYNTHESIS,
+		.type = TYPE_GRASS,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[10] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_FRENZY_PLANT,
 		.type = TYPE_GRASS,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_BULLET_SEED,
 		.type = TYPE_GRASS,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_GIGA_DRAIN,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_SOLAR_BEAM,
 		.type = TYPE_GRASS,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_CUT,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -275,7 +281,7 @@ const struct Move Charizard_Moves[] = {
 	[7] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[8] = {
@@ -291,216 +297,222 @@ const struct Move Charizard_Moves[] = {
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_DRAGON_RAGE,
+		.type = TYPE_DRAGON,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_BLAST_BURN,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_DRAGON_CLAW,
 		.type = TYPE_DRAGON,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_AERIAL_ACE,
 		.type = TYPE_FLYING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_STEEL_WING,
 		.type = TYPE_STEEL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_OVERHEAT,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[42] = {
+	[43] = {
 		.name = MOVE_CUT,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[43] = {
+	[44] = {
 		.name = MOVE_FLY,
 		.type = TYPE_FLYING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[44] = {
+	[45] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[45] = {
+	[46] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -564,198 +576,204 @@ const struct Move Blastoise_Moves[] = {
 		.lvlup = 1
 	},
 	[9] = {
+		.name = MOVE_SKULL_BASH,
+		.type = TYPE_NORMAL,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[10] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_HYDRO_CANNON,
 		.type = TYPE_WATER,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[39] = {
-		.name = MOVE_STRENGTH,
-		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[40] = {
+		.name = MOVE_STRENGTH,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[41] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
 		.strong = 1,
@@ -809,7 +827,7 @@ const struct Move Butterfree_Moves[] = {
 	[7] = {
 		.name = MOVE_PSYBEAM,
 		.type = TYPE_PSYCHIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[8] = {
@@ -821,7 +839,7 @@ const struct Move Butterfree_Moves[] = {
 	[9] = {
 		.name = MOVE_SILVER_WIND,
 		.type = TYPE_BUG,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[10] = {
@@ -887,7 +905,7 @@ const struct Move Butterfree_Moves[] = {
 	[20] = {
 		.name = MOVE_GIGA_DRAIN,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[21] = {
@@ -992,7 +1010,7 @@ const struct Move Beedrill_Moves[] = {
 	[2] = {
 		.name = MOVE_TWINEEDLE,
 		.type = TYPE_BUG,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[3] = {
@@ -1004,7 +1022,7 @@ const struct Move Beedrill_Moves[] = {
 	[4] = {
 		.name = MOVE_PURSUIT,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -1136,7 +1154,7 @@ const struct Move Beedrill_Moves[] = {
 	[26] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[27] = {
@@ -1157,7 +1175,7 @@ const struct Move Pidgeot_Moves[] = {
 	[0] = {
 		.name = MOVE_TACKLE,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
@@ -1169,13 +1187,13 @@ const struct Move Pidgeot_Moves[] = {
 	[2] = {
 		.name = MOVE_GUST,
 		.type = TYPE_FLYING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[3] = {
 		.name = MOVE_QUICK_ATTACK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[4] = {
@@ -1340,7 +1358,7 @@ const struct Move Raticate_Moves[] = {
 	[3] = {
 		.name = MOVE_HYPER_FANG,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[4] = {
@@ -1466,7 +1484,7 @@ const struct Move Raticate_Moves[] = {
 	[24] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[25] = {
@@ -1544,7 +1562,7 @@ const struct Move Raticate_Moves[] = {
 	[37] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[38] = {
@@ -1559,7 +1577,7 @@ const struct Move Fearow_Moves[] = {
 	[0] = {
 		.name = MOVE_PECK,
 		.type = TYPE_FLYING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
@@ -1577,13 +1595,13 @@ const struct Move Fearow_Moves[] = {
 	[3] = {
 		.name = MOVE_FURY_ATTACK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[4] = {
 		.name = MOVE_PURSUIT,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -1796,7 +1814,7 @@ const struct Move Arbok_Moves[] = {
 	[12] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[13] = {
@@ -1844,7 +1862,7 @@ const struct Move Arbok_Moves[] = {
 	[20] = {
 		.name = MOVE_GIGA_DRAIN,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[21] = {
@@ -1874,7 +1892,7 @@ const struct Move Arbok_Moves[] = {
 	[25] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
@@ -2051,7 +2069,7 @@ const struct Move Raichu_Moves[] = {
 	[20] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[21] = {
@@ -2081,7 +2099,7 @@ const struct Move Raichu_Moves[] = {
 	[25] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
@@ -2123,7 +2141,7 @@ const struct Move Raichu_Moves[] = {
 	[32] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[33] = {
@@ -2168,7 +2186,7 @@ const struct Move Sandslash_Moves[] = {
 	[4] = {
 		.name = MOVE_SLASH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -2184,174 +2202,180 @@ const struct Move Sandslash_Moves[] = {
 		.lvlup = 1
 	},
 	[7] = {
+		.name = MOVE_SAND_TOMB,
+		.type = TYPE_GROUND,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[8] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[8] = {
+	[9] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_AERIAL_ACE,
 		.type = TYPE_FLYING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_CUT,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -2489,7 +2513,7 @@ const struct Move Nidoqueen_Moves[] = {
 	[21] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[22] = {
@@ -2531,7 +2555,7 @@ const struct Move Nidoqueen_Moves[] = {
 	[28] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
@@ -2651,7 +2675,7 @@ const struct Move Nidoqueen_Moves[] = {
 	[48] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[49] = {
@@ -2798,7 +2822,7 @@ const struct Move Nidoking_Moves[] = {
 	[21] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[22] = {
@@ -2894,7 +2918,7 @@ const struct Move Nidoking_Moves[] = {
 	[37] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[38] = {
@@ -2954,7 +2978,7 @@ const struct Move Nidoking_Moves[] = {
 	[47] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[48] = {
@@ -3101,7 +3125,7 @@ const struct Move Clefable_Moves[] = {
 	[21] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[22] = {
@@ -3185,7 +3209,7 @@ const struct Move Clefable_Moves[] = {
 	[35] = {
 		.name = MOVE_PSYCHIC,
 		.type = TYPE_PSYCHIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[36] = {
@@ -3221,7 +3245,7 @@ const struct Move Clefable_Moves[] = {
 	[41] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[42] = {
@@ -3272,13 +3296,13 @@ const struct Move Ninetales_Moves[] = {
 	[0] = {
 		.name = MOVE_EMBER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
 		.name = MOVE_QUICK_ATTACK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[2] = {
@@ -3380,7 +3404,7 @@ const struct Move Ninetales_Moves[] = {
 	[18] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[19] = {
@@ -3539,7 +3563,7 @@ const struct Move Wigglytuff_Moves[] = {
 	[18] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[19] = {
@@ -3617,7 +3641,7 @@ const struct Move Wigglytuff_Moves[] = {
 	[31] = {
 		.name = MOVE_PSYCHIC,
 		.type = TYPE_PSYCHIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[32] = {
@@ -3653,7 +3677,7 @@ const struct Move Wigglytuff_Moves[] = {
 	[37] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[38] = {
@@ -3728,7 +3752,7 @@ const struct Move Golbat_Moves[] = {
 	[4] = {
 		.name = MOVE_BITE,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -3746,7 +3770,7 @@ const struct Move Golbat_Moves[] = {
 	[7] = {
 		.name = MOVE_AIR_CUTTER,
 		.type = TYPE_FLYING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[8] = {
@@ -3758,7 +3782,7 @@ const struct Move Golbat_Moves[] = {
 	[9] = {
 		.name = MOVE_POISON_FANG,
 		.type = TYPE_POISON,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[10] = {
@@ -3905,7 +3929,7 @@ const struct Move Vileplume_Moves[] = {
 	[0] = {
 		.name = MOVE_ABSORB,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
@@ -3923,7 +3947,7 @@ const struct Move Vileplume_Moves[] = {
 	[3] = {
 		.name = MOVE_MEGA_DRAIN,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[4] = {
@@ -3959,7 +3983,7 @@ const struct Move Vileplume_Moves[] = {
 	[9] = {
 		.name = MOVE_BULLET_SEED,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[10] = {
@@ -4052,7 +4076,7 @@ const struct Move Parasect_Moves[] = {
 	[0] = {
 		.name = MOVE_SCRATCH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
@@ -4092,144 +4116,150 @@ const struct Move Parasect_Moves[] = {
 		.lvlup = 1
 	},
 	[7] = {
+		.name = MOVE_GIGA_DRAIN,
+		.type = TYPE_GRASS,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[8] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[8] = {
+	[9] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_BULLET_SEED,
 		.type = TYPE_GRASS,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_GIGA_DRAIN,
 		.type = TYPE_GRASS,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_SOLAR_BEAM,
 		.type = TYPE_GRASS,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_AERIAL_ACE,
 		.type = TYPE_FLYING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[28] = {
-		.name = MOVE_CUT,
-		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
+		.name = MOVE_CUT,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[30] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -4241,7 +4271,7 @@ const struct Move Venomoth_Moves[] = {
 	[0] = {
 		.name = MOVE_SILVER_WIND,
 		.type = TYPE_BUG,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
@@ -4271,7 +4301,7 @@ const struct Move Venomoth_Moves[] = {
 	[5] = {
 		.name = MOVE_CONFUSION,
 		.type = TYPE_PSYCHIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[6] = {
@@ -4311,126 +4341,132 @@ const struct Move Venomoth_Moves[] = {
 		.lvlup = 1
 	},
 	[12] = {
+		.name = MOVE_PSYCHIC,
+		.type = TYPE_PSYCHIC,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[13] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_GIGA_DRAIN,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_SOLAR_BEAM,
 		.type = TYPE_GRASS,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_PSYCHIC,
 		.type = TYPE_PSYCHIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_AERIAL_ACE,
 		.type = TYPE_FLYING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_SKILL_SWAP,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
@@ -4472,7 +4508,7 @@ const struct Move Dugtrio_Moves[] = {
 	[5] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[6] = {
@@ -4500,132 +4536,138 @@ const struct Move Dugtrio_Moves[] = {
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_EARTHQUAKE,
+		.type = TYPE_GROUND,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_AERIAL_ACE,
 		.type = TYPE_FLYING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_CUT,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -4679,190 +4721,196 @@ const struct Move Persian_Moves[] = {
 	[7] = {
 		.name = MOVE_SLASH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[8] = {
+		.name = MOVE_FAKE_OUT,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[9] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_DREAM_EATER,
 		.type = TYPE_PSYCHIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_TAUNT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_SHOCK_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_AERIAL_ACE,
 		.type = TYPE_FLYING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_TORMENT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_SNATCH,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_CUT,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
@@ -5036,7 +5084,7 @@ const struct Move Golduck_Moves[] = {
 	[27] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[28] = {
@@ -5054,7 +5102,7 @@ const struct Move Golduck_Moves[] = {
 	[30] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[31] = {
@@ -5096,7 +5144,7 @@ const struct Move Golduck_Moves[] = {
 	[37] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[38] = {
@@ -5171,7 +5219,7 @@ const struct Move Primeape_Moves[] = {
 	[8] = {
 		.name = MOVE_CROSS_CHOP,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[9] = {
@@ -5181,216 +5229,222 @@ const struct Move Primeape_Moves[] = {
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_SCREECH,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_METRONOME,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_BULK_UP,
 		.type = TYPE_FIGHTING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_TAUNT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_AERIAL_ACE,
 		.type = TYPE_FLYING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[42] = {
+	[43] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[43] = {
+	[44] = {
 		.name = MOVE_OVERHEAT,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[44] = {
+	[45] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[45] = {
+	[46] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -5492,7 +5546,7 @@ const struct Move Arcanine_Moves[] = {
 	[15] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[16] = {
@@ -5504,7 +5558,7 @@ const struct Move Arcanine_Moves[] = {
 	[17] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[18] = {
@@ -5534,7 +5588,7 @@ const struct Move Arcanine_Moves[] = {
 	[22] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[23] = {
@@ -5601,210 +5655,216 @@ const struct Move Poliwrath_Moves[] = {
 		.lvlup = 1
 	},
 	[4] = {
+		.name = MOVE_MIND_READER,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[5] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[5] = {
+	[6] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[6] = {
+	[7] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[7] = {
+	[8] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[8] = {
+	[9] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_METRONOME,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_BULK_UP,
 		.type = TYPE_FIGHTING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_PSYCHIC,
 		.type = TYPE_PSYCHIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
 		.strong = 1,
@@ -5858,7 +5918,7 @@ const struct Move Alakazam_Moves[] = {
 	[7] = {
 		.name = MOVE_FUTURE_SIGHT,
 		.type = TYPE_PSYCHIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[8] = {
@@ -6014,7 +6074,7 @@ const struct Move Alakazam_Moves[] = {
 	[33] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[34] = {
@@ -6032,7 +6092,7 @@ const struct Move Alakazam_Moves[] = {
 	[36] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[37] = {
@@ -6161,196 +6221,202 @@ const struct Move Machamp_Moves[] = {
 	[9] = {
 		.name = MOVE_CROSS_CHOP,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_SCARY_FACE,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_METRONOME,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_BULK_UP,
 		.type = TYPE_FIGHTING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -6380,7 +6446,7 @@ const struct Move Victreebel_Moves[] = {
 	[3] = {
 		.name = MOVE_VINE_WHIP,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[4] = {
@@ -6506,13 +6572,13 @@ const struct Move Victreebel_Moves[] = {
 	[24] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[25] = {
 		.name = MOVE_CUT,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
@@ -6551,7 +6617,7 @@ const struct Move Tentacruel_Moves[] = {
 	[4] = {
 		.name = MOVE_BUBBLE_BEAM,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -6573,141 +6639,147 @@ const struct Move Tentacruel_Moves[] = {
 		.lvlup = 1
 	},
 	[8] = {
+		.name = MOVE_HYDRO_PUMP,
+		.type = TYPE_WATER,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[9] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_GIGA_DRAIN,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_CUT,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 };
@@ -6764,196 +6836,202 @@ const struct Move Golem_Moves[] = {
 	[8] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[9] = {
+		.name = MOVE_EXPLOSION,
+		.type = TYPE_NORMAL,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[10] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_METRONOME,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_EXPLOSION,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -7001,7 +7079,7 @@ const struct Move Rapidash_Moves[] = {
 	[6] = {
 		.name = MOVE_TAKE_DOWN,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[7] = {
@@ -7019,7 +7097,7 @@ const struct Move Rapidash_Moves[] = {
 	[9] = {
 		.name = MOVE_BOUNCE,
 		.type = TYPE_FLYING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[10] = {
@@ -7085,7 +7163,7 @@ const struct Move Rapidash_Moves[] = {
 	[20] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[21] = {
@@ -7208,256 +7286,262 @@ const struct Move Slowbro_Moves[] = {
 	[10] = {
 		.name = MOVE_PSYCHIC,
 		.type = TYPE_PSYCHIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[11] = {
+		.name = MOVE_PSYCH_UP,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[12] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_DREAM_EATER,
 		.type = TYPE_PSYCHIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_THUNDER_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_CALM_MIND,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
-		.name = MOVE_ICE_BEAM,
-		.type = TYPE_ICE,
-		.strong = 2,
-		.lvlup = 0
-	},
 	[28] = {
-		.name = MOVE_BLIZZARD,
+		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
+		.name = MOVE_BLIZZARD,
+		.type = TYPE_ICE,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[30] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_SAFEGUARD,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_PSYCHIC,
 		.type = TYPE_PSYCHIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[42] = {
+	[43] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[43] = {
+	[44] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[44] = {
+	[45] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[45] = {
+	[46] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[46] = {
+	[47] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[47] = {
+	[48] = {
 		.name = MOVE_SKILL_SWAP,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[48] = {
+	[49] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[49] = {
+	[50] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[50] = {
+	[51] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[51] = {
+	[52] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[52] = {
+	[53] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
 		.strong = 1,
@@ -7475,13 +7559,13 @@ const struct Move Magneton_Moves[] = {
 	[1] = {
 		.name = MOVE_TACKLE,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[2] = {
 		.name = MOVE_THUNDER_SHOCK,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[3] = {
@@ -7521,120 +7605,126 @@ const struct Move Magneton_Moves[] = {
 		.lvlup = 1
 	},
 	[9] = {
+		.name = MOVE_SCREECH,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[10] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_THUNDER_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_REFLECT,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_SHOCK_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
@@ -7646,7 +7736,7 @@ const struct Move Farfetchd_Moves[] = {
 	[0] = {
 		.name = MOVE_PECK,
 		.type = TYPE_FLYING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
@@ -7700,7 +7790,7 @@ const struct Move Farfetchd_Moves[] = {
 	[9] = {
 		.name = MOVE_FALSE_SWIPE,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[10] = {
@@ -7796,7 +7886,7 @@ const struct Move Farfetchd_Moves[] = {
 	[25] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
@@ -7835,7 +7925,7 @@ const struct Move Dodrio_Moves[] = {
 	[2] = {
 		.name = MOVE_PURSUIT,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[3] = {
@@ -7859,7 +7949,7 @@ const struct Move Dodrio_Moves[] = {
 	[6] = {
 		.name = MOVE_UPROAR,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[7] = {
@@ -7973,7 +8063,7 @@ const struct Move Dodrio_Moves[] = {
 	[25] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
@@ -7994,13 +8084,13 @@ const struct Move Dewgong_Moves[] = {
 	[0] = {
 		.name = MOVE_SIGNAL_BEAM,
 		.type = TYPE_BUG,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
 		.name = MOVE_HEADBUTT,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[2] = {
@@ -8018,7 +8108,7 @@ const struct Move Dewgong_Moves[] = {
 	[4] = {
 		.name = MOVE_AURORA_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -8040,132 +8130,138 @@ const struct Move Dewgong_Moves[] = {
 		.lvlup = 1
 	},
 	[8] = {
+		.name = MOVE_ICE_BEAM,
+		.type = TYPE_ICE,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[9] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_SAFEGUARD,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
 		.strong = 1,
@@ -8315,7 +8411,7 @@ const struct Move Muk_Moves[] = {
 	[23] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[24] = {
@@ -8333,7 +8429,7 @@ const struct Move Muk_Moves[] = {
 	[26] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[27] = {
@@ -8399,7 +8495,7 @@ const struct Move Muk_Moves[] = {
 	[37] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[38] = {
@@ -8426,7 +8522,7 @@ const struct Move Cloyster_Moves[] = {
 	[2] = {
 		.name = MOVE_AURORA_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[3] = {
@@ -8474,7 +8570,7 @@ const struct Move Cloyster_Moves[] = {
 	[10] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[11] = {
@@ -8576,7 +8672,7 @@ const struct Move Cloyster_Moves[] = {
 	[27] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 };
@@ -8633,220 +8729,226 @@ const struct Move Gengar_Moves[] = {
 	[8] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[9] = {
+		.name = MOVE_NIGHTMARE,
+		.type = TYPE_GHOST,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[10] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_METRONOME,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_DREAM_EATER,
 		.type = TYPE_PSYCHIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_EXPLOSION,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_TAUNT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_GIGA_DRAIN,
 		.type = TYPE_GRASS,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_PSYCHIC,
 		.type = TYPE_PSYCHIC,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[33] = {
-		.name = MOVE_SHADOW_BALL,
-		.type = TYPE_GHOST,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[34] = {
+		.name = MOVE_SHADOW_BALL,
+		.type = TYPE_GHOST,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[35] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_TORMENT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_SKILL_SWAP,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[42] = {
+	[43] = {
 		.name = MOVE_SNATCH,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[43] = {
+	[44] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[44] = {
+	[45] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -8906,7 +9008,7 @@ const struct Move Onix_Moves[] = {
 	[8] = {
 		.name = MOVE_SLAM,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[9] = {
@@ -8916,150 +9018,156 @@ const struct Move Onix_Moves[] = {
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_SAND_TOMB,
+		.type = TYPE_GROUND,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_EXPLOSION,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_TAUNT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_TORMENT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -9101,7 +9209,7 @@ const struct Move Hypno_Moves[] = {
 	[5] = {
 		.name = MOVE_HEADBUTT,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[6] = {
@@ -9281,13 +9389,13 @@ const struct Move Hypno_Moves[] = {
 	[35] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[36] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[37] = {
@@ -9392,7 +9500,7 @@ const struct Move Kingler_Moves[] = {
 	[6] = {
 		.name = MOVE_STOMP,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[7] = {
@@ -9494,7 +9602,7 @@ const struct Move Kingler_Moves[] = {
 	[23] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[24] = {
@@ -9560,7 +9668,7 @@ const struct Move Kingler_Moves[] = {
 	[34] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 };
@@ -9575,7 +9683,7 @@ const struct Move Electrode_Moves[] = {
 	[1] = {
 		.name = MOVE_TACKLE,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[2] = {
@@ -9593,7 +9701,7 @@ const struct Move Electrode_Moves[] = {
 	[4] = {
 		.name = MOVE_SPARK,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -9605,7 +9713,7 @@ const struct Move Electrode_Moves[] = {
 	[6] = {
 		.name = MOVE_ROLLOUT,
 		.type = TYPE_ROCK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[7] = {
@@ -9621,132 +9729,138 @@ const struct Move Electrode_Moves[] = {
 		.lvlup = 1
 	},
 	[9] = {
+		.name = MOVE_EXPLOSION,
+		.type = TYPE_NORMAL,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[10] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_THUNDER_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_EXPLOSION,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_TAUNT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_LIGHT_SCREEN,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_SHOCK_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_TORMENT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
@@ -9776,13 +9890,13 @@ const struct Move Exeggutor_Moves[] = {
 	[3] = {
 		.name = MOVE_STOMP,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[4] = {
 		.name = MOVE_EGG_BOMB,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -9902,7 +10016,7 @@ const struct Move Exeggutor_Moves[] = {
 	[24] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[25] = {
@@ -10001,208 +10115,214 @@ const struct Move Marowak_Moves[] = {
 	[9] = {
 		.name = MOVE_THRASH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_BONE_RUSH,
+		.type = TYPE_GROUND,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_AERIAL_ACE,
 		.type = TYPE_FLYING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[42] = {
+	[43] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[43] = {
+	[44] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -10244,7 +10364,7 @@ const struct Move Hitmonlee_Moves[] = {
 	[5] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[6] = {
@@ -10284,168 +10404,174 @@ const struct Move Hitmonlee_Moves[] = {
 		.lvlup = 1
 	},
 	[12] = {
+		.name = MOVE_REVERSAL,
+		.type = TYPE_FIGHTING,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[13] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_METRONOME,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_BULK_UP,
 		.type = TYPE_FIGHTING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -10487,13 +10613,13 @@ const struct Move Hitmonchan_Moves[] = {
 	[5] = {
 		.name = MOVE_THUNDER_PUNCH,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[6] = {
 		.name = MOVE_ICE_PUNCH,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[7] = {
@@ -10643,7 +10769,7 @@ const struct Move Hitmonchan_Moves[] = {
 	[31] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[32] = {
@@ -10752,258 +10878,264 @@ const struct Move Lickitung_Moves[] = {
 		.lvlup = 1
 	},
 	[9] = {
+		.name = MOVE_REFRESH,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[10] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_DREAM_EATER,
 		.type = TYPE_PSYCHIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
-		.name = MOVE_ICE_BEAM,
-		.type = TYPE_ICE,
-		.strong = 2,
-		.lvlup = 0
-	},
 	[24] = {
-		.name = MOVE_BLIZZARD,
+		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 1,
 		.lvlup = 0
 	},
 	[25] = {
+		.name = MOVE_BLIZZARD,
+		.type = TYPE_ICE,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[26] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_SOLAR_BEAM,
 		.type = TYPE_GRASS,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
-		.name = MOVE_THUNDERBOLT,
-		.type = TYPE_ELECTRIC,
-		.strong = 2,
-		.lvlup = 0
-	},
 	[32] = {
-		.name = MOVE_THUNDER,
+		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 1,
 		.lvlup = 0
 	},
 	[33] = {
+		.name = MOVE_THUNDER,
+		.type = TYPE_ELECTRIC,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[34] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_SHOCK_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[42] = {
+	[43] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[43] = {
+	[44] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[44] = {
+	[45] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[45] = {
+	[46] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[46] = {
+	[47] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[47] = {
+	[48] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[48] = {
+	[49] = {
 		.name = MOVE_CUT,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[49] = {
+	[50] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[50] = {
+	[51] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[51] = {
+	[52] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -11061,150 +11193,156 @@ const struct Move Weezing_Moves[] = {
 		.lvlup = 1
 	},
 	[8] = {
+		.name = MOVE_DESTINY_BOND,
+		.type = TYPE_GHOST,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[9] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_EXPLOSION,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_TAUNT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_SHOCK_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_TORMENT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
@@ -11270,7 +11408,7 @@ const struct Move Rhydon_Moves[] = {
 	[9] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[10] = {
@@ -11342,7 +11480,7 @@ const struct Move Rhydon_Moves[] = {
 	[21] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[22] = {
@@ -11486,7 +11624,7 @@ const struct Move Rhydon_Moves[] = {
 	[45] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[46] = {
@@ -11681,7 +11819,7 @@ const struct Move Chansey_Moves[] = {
 	[29] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[30] = {
@@ -11741,7 +11879,7 @@ const struct Move Chansey_Moves[] = {
 	[39] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[40] = {
@@ -11795,7 +11933,7 @@ const struct Move Chansey_Moves[] = {
 	[48] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[49] = {
@@ -11906,7 +12044,7 @@ const struct Move Tangela_Moves[] = {
 	[6] = {
 		.name = MOVE_VINE_WHIP,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[7] = {
@@ -11918,7 +12056,7 @@ const struct Move Tangela_Moves[] = {
 	[8] = {
 		.name = MOVE_MEGA_DRAIN,
 		.type = TYPE_GRASS,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[9] = {
@@ -12044,7 +12182,7 @@ const struct Move Tangela_Moves[] = {
 	[29] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[30] = {
@@ -12221,7 +12359,7 @@ const struct Move Kangaskhan_Moves[] = {
 	[25] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
@@ -12269,7 +12407,7 @@ const struct Move Kangaskhan_Moves[] = {
 	[33] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[34] = {
@@ -12383,7 +12521,7 @@ const struct Move Kangaskhan_Moves[] = {
 	[52] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[53] = {
@@ -12422,13 +12560,13 @@ const struct Move Seadra_Moves[] = {
 	[3] = {
 		.name = MOVE_WATER_GUN,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[4] = {
 		.name = MOVE_TWISTER,
 		.type = TYPE_DRAGON,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -12438,123 +12576,129 @@ const struct Move Seadra_Moves[] = {
 		.lvlup = 1
 	},
 	[6] = {
+		.name = MOVE_HYDRO_PUMP,
+		.type = TYPE_WATER,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[7] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[7] = {
+	[8] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[8] = {
+	[9] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 };
@@ -12587,7 +12731,7 @@ const struct Move Seaking_Moves[] = {
 	[4] = {
 		.name = MOVE_HORN_ATTACK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -12635,7 +12779,7 @@ const struct Move Seaking_Moves[] = {
 	[12] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[13] = {
@@ -12731,7 +12875,7 @@ const struct Move Seaking_Moves[] = {
 	[28] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 };
@@ -12830,7 +12974,7 @@ const struct Move Starmie_Moves[] = {
 	[15] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[16] = {
@@ -12872,7 +13016,7 @@ const struct Move Starmie_Moves[] = {
 	[22] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[23] = {
@@ -12902,7 +13046,7 @@ const struct Move Starmie_Moves[] = {
 	[27] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[28] = {
@@ -13043,7 +13187,7 @@ const struct Move Mr_Mime_Moves[] = {
 	[17] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[18] = {
@@ -13181,7 +13325,7 @@ const struct Move Mr_Mime_Moves[] = {
 	[40] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[41] = {
@@ -13298,13 +13442,13 @@ const struct Move Scyther_Moves[] = {
 	[3] = {
 		.name = MOVE_PURSUIT,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[4] = {
 		.name = MOVE_FALSE_SWIPE,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
@@ -13448,7 +13592,7 @@ const struct Move Scyther_Moves[] = {
 	[28] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
@@ -13521,216 +13665,222 @@ const struct Move Jynx_Moves[] = {
 		.lvlup = 1
 	},
 	[8] = {
+		.name = MOVE_BODY_SLAM,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[9] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_METRONOME,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_DREAM_EATER,
 		.type = TYPE_PSYCHIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_CALM_MIND,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_TAUNT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_LIGHT_SCREEN,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_PSYCHIC,
 		.type = TYPE_PSYCHIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[34] = {
-		.name = MOVE_BRICK_BREAK,
-		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[35] = {
+		.name = MOVE_BRICK_BREAK,
+		.type = TYPE_FIGHTING,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[36] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_REFLECT,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_TORMENT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[42] = {
+	[43] = {
 		.name = MOVE_SKILL_SWAP,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[43] = {
+	[44] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
@@ -13892,7 +14042,7 @@ const struct Move Electabuzz_Moves[] = {
 	[25] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
@@ -13910,7 +14060,7 @@ const struct Move Electabuzz_Moves[] = {
 	[28] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
@@ -13952,7 +14102,7 @@ const struct Move Electabuzz_Moves[] = {
 	[35] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[36] = {
@@ -14027,7 +14177,7 @@ const struct Move Magmar_Moves[] = {
 	[9] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[10] = {
@@ -14123,7 +14273,7 @@ const struct Move Magmar_Moves[] = {
 	[25] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
@@ -14171,7 +14321,7 @@ const struct Move Magmar_Moves[] = {
 	[33] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[34] = {
@@ -14234,7 +14384,7 @@ const struct Move Pinsir_Moves[] = {
 	[8] = {
 		.name = MOVE_SUBMISSION,
 		.type = TYPE_FIGHTING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[9] = {
@@ -14264,7 +14414,7 @@ const struct Move Pinsir_Moves[] = {
 	[13] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[14] = {
@@ -14366,7 +14516,7 @@ const struct Move Pinsir_Moves[] = {
 	[30] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[31] = {
@@ -14459,190 +14609,196 @@ const struct Move Tauros_Moves[] = {
 	[8] = {
 		.name = MOVE_THRASH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[9] = {
+		.name = MOVE_TAKE_DOWN,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[10] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
-		.name = MOVE_ICE_BEAM,
-		.type = TYPE_ICE,
-		.strong = 2,
-		.lvlup = 0
-	},
 	[17] = {
-		.name = MOVE_BLIZZARD,
+		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 1,
 		.lvlup = 0
 	},
 	[18] = {
+		.name = MOVE_BLIZZARD,
+		.type = TYPE_ICE,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[19] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_SOLAR_BEAM,
 		.type = TYPE_GRASS,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
-		.name = MOVE_THUNDERBOLT,
-		.type = TYPE_ELECTRIC,
-		.strong = 2,
-		.lvlup = 0
-	},
 	[25] = {
-		.name = MOVE_THUNDER,
+		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
+		.name = MOVE_THUNDER,
+		.type = TYPE_ELECTRIC,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[27] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_SHOCK_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
@@ -14654,7 +14810,7 @@ const struct Move Gyarados_Moves[] = {
 	[0] = {
 		.name = MOVE_THRASH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
@@ -14700,401 +14856,158 @@ const struct Move Gyarados_Moves[] = {
 		.lvlup = 1
 	},
 	[8] = {
+		.name = MOVE_HYPER_BEAM,
+		.type = TYPE_NORMAL,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[9] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_THUNDER_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_TAUNT,
 		.type = TYPE_DARK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
-		.name = MOVE_ICE_BEAM,
-		.type = TYPE_ICE,
-		.strong = 2,
-		.lvlup = 0
-	},
 	[19] = {
-		.name = MOVE_BLIZZARD,
+		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 1,
 		.lvlup = 0
 	},
 	[20] = {
+		.name = MOVE_BLIZZARD,
+		.type = TYPE_ICE,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[21] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
-		.name = MOVE_THUNDERBOLT,
-		.type = TYPE_ELECTRIC,
-		.strong = 2,
-		.lvlup = 0
-	},
 	[25] = {
-		.name = MOVE_THUNDER,
+		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 1,
 		.lvlup = 0
 	},
 	[26] = {
+		.name = MOVE_THUNDER,
+		.type = TYPE_ELECTRIC,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[27] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_TORMENT,
 		.type = TYPE_DARK,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[33] = {
-		.name = MOVE_SECRET_POWER,
-		.type = TYPE_NORMAL,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[34] = {
-		.name = MOVE_REST,
-		.type = TYPE_PSYCHIC,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[35] = {
-		.name = MOVE_ATTRACT,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[36] = {
-		.name = MOVE_SURF,
-		.type = TYPE_WATER,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[37] = {
-		.name = MOVE_STRENGTH,
-		.type = TYPE_NORMAL,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[38] = {
-		.name = MOVE_ROCK_SMASH,
-		.type = TYPE_FIGHTING,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[39] = {
-		.name = MOVE_DIVE,
-		.type = TYPE_WATER,
-		.strong = 1,
-		.lvlup = 0
-	},
-};
-
-const struct Move Lapras_Moves[] = {
-	[0] = {
-		.name = MOVE_WATER_GUN,
-		.type = TYPE_WATER,
-		.strong = 1,
-		.lvlup = 1
-	},
-	[1] = {
-		.name = MOVE_GROWL,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 1
-	},
-	[2] = {
-		.name = MOVE_SING,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 1
-	},
-	[3] = {
-		.name = MOVE_MIST,
-		.type = TYPE_ICE,
-		.strong = 0,
-		.lvlup = 1
-	},
-	[4] = {
-		.name = MOVE_BODY_SLAM,
-		.type = TYPE_NORMAL,
-		.strong = 2,
-		.lvlup = 1
-	},
-	[5] = {
-		.name = MOVE_CONFUSE_RAY,
-		.type = TYPE_GHOST,
-		.strong = 0,
-		.lvlup = 1
-	},
-	[6] = {
-		.name = MOVE_PERISH_SONG,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 1
-	},
-	[7] = {
-		.name = MOVE_ICE_BEAM,
-		.type = TYPE_ICE,
-		.strong = 2,
-		.lvlup = 1
-	},
-	[8] = {
-		.name = MOVE_RAIN_DANCE,
-		.type = TYPE_WATER,
-		.strong = 0,
-		.lvlup = 1
-	},
-	[9] = {
-		.name = MOVE_SAFEGUARD,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 1
-	},
-	[10] = {
-		.name = MOVE_HYDRO_PUMP,
-		.type = TYPE_WATER,
-		.strong = 2,
-		.lvlup = 1
-	},
-	[11] = {
-		.name = MOVE_DOUBLE_EDGE,
-		.type = TYPE_NORMAL,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[12] = {
-		.name = MOVE_MIMIC,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[13] = {
-		.name = MOVE_DREAM_EATER,
-		.type = TYPE_PSYCHIC,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[14] = {
-		.name = MOVE_SUBSTITUTE,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[15] = {
-		.name = MOVE_WATER_PULSE,
-		.type = TYPE_WATER,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[16] = {
-		.name = MOVE_ROAR,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[17] = {
-		.name = MOVE_TOXIC,
-		.type = TYPE_POISON,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[18] = {
-		.name = MOVE_HAIL,
-		.type = TYPE_ICE,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[19] = {
-		.name = MOVE_HIDDEN_POWER,
-		.type = TYPE_NORMAL,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[20] = {
-		.name = MOVE_ICE_BEAM,
-		.type = TYPE_ICE,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[21] = {
-		.name = MOVE_BLIZZARD,
-		.type = TYPE_ICE,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[22] = {
-		.name = MOVE_HYPER_BEAM,
-		.type = TYPE_NORMAL,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[23] = {
-		.name = MOVE_PROTECT,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[24] = {
-		.name = MOVE_RAIN_DANCE,
-		.type = TYPE_WATER,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[25] = {
-		.name = MOVE_SAFEGUARD,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[26] = {
-		.name = MOVE_FRUSTRATION,
-		.type = TYPE_NORMAL,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[27] = {
-		.name = MOVE_IRON_TAIL,
-		.type = TYPE_STEEL,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[28] = {
-		.name = MOVE_THUNDERBOLT,
-		.type = TYPE_ELECTRIC,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[29] = {
-		.name = MOVE_THUNDER,
-		.type = TYPE_ELECTRIC,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[30] = {
-		.name = MOVE_RETURN,
-		.type = TYPE_NORMAL,
-		.strong = 1,
-		.lvlup = 0
-	},
-	[31] = {
-		.name = MOVE_PSYCHIC,
-		.type = TYPE_PSYCHIC,
-		.strong = 2,
-		.lvlup = 0
-	},
-	[32] = {
-		.name = MOVE_DOUBLE_TEAM,
-		.type = TYPE_NORMAL,
-		.strong = 0,
-		.lvlup = 0
-	},
-	[33] = {
-		.name = MOVE_SHOCK_WAVE,
-		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
@@ -15135,6 +15048,261 @@ const struct Move Lapras_Moves[] = {
 		.lvlup = 0
 	},
 	[40] = {
+		.name = MOVE_DIVE,
+		.type = TYPE_WATER,
+		.strong = 1,
+		.lvlup = 0
+	},
+};
+
+const struct Move Lapras_Moves[] = {
+	[0] = {
+		.name = MOVE_WATER_GUN,
+		.type = TYPE_WATER,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[1] = {
+		.name = MOVE_GROWL,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[2] = {
+		.name = MOVE_SING,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[3] = {
+		.name = MOVE_MIST,
+		.type = TYPE_ICE,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[4] = {
+		.name = MOVE_BODY_SLAM,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[5] = {
+		.name = MOVE_CONFUSE_RAY,
+		.type = TYPE_GHOST,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[6] = {
+		.name = MOVE_PERISH_SONG,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[7] = {
+		.name = MOVE_ICE_BEAM,
+		.type = TYPE_ICE,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[8] = {
+		.name = MOVE_RAIN_DANCE,
+		.type = TYPE_WATER,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[9] = {
+		.name = MOVE_SAFEGUARD,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 1
+	},
+	[10] = {
+		.name = MOVE_HYDRO_PUMP,
+		.type = TYPE_WATER,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[11] = {
+		.name = MOVE_SHEER_COLD,
+		.type = TYPE_ICE,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[12] = {
+		.name = MOVE_DOUBLE_EDGE,
+		.type = TYPE_NORMAL,
+		.strong = 2,
+		.lvlup = 0
+	},
+	[13] = {
+		.name = MOVE_MIMIC,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[14] = {
+		.name = MOVE_DREAM_EATER,
+		.type = TYPE_PSYCHIC,
+		.strong = 2,
+		.lvlup = 0
+	},
+	[15] = {
+		.name = MOVE_SUBSTITUTE,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[16] = {
+		.name = MOVE_WATER_PULSE,
+		.type = TYPE_WATER,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[17] = {
+		.name = MOVE_ROAR,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[18] = {
+		.name = MOVE_TOXIC,
+		.type = TYPE_POISON,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[19] = {
+		.name = MOVE_HAIL,
+		.type = TYPE_ICE,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[20] = {
+		.name = MOVE_HIDDEN_POWER,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[21] = {
+		.name = MOVE_ICE_BEAM,
+		.type = TYPE_ICE,
+		.strong = 2,
+		.lvlup = 0
+	},
+	[22] = {
+		.name = MOVE_BLIZZARD,
+		.type = TYPE_ICE,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[23] = {
+		.name = MOVE_HYPER_BEAM,
+		.type = TYPE_NORMAL,
+		.strong = 2,
+		.lvlup = 0
+	},
+	[24] = {
+		.name = MOVE_PROTECT,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[25] = {
+		.name = MOVE_RAIN_DANCE,
+		.type = TYPE_WATER,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[26] = {
+		.name = MOVE_SAFEGUARD,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[27] = {
+		.name = MOVE_FRUSTRATION,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[28] = {
+		.name = MOVE_IRON_TAIL,
+		.type = TYPE_STEEL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[29] = {
+		.name = MOVE_THUNDERBOLT,
+		.type = TYPE_ELECTRIC,
+		.strong = 2,
+		.lvlup = 0
+	},
+	[30] = {
+		.name = MOVE_THUNDER,
+		.type = TYPE_ELECTRIC,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[31] = {
+		.name = MOVE_RETURN,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[32] = {
+		.name = MOVE_PSYCHIC,
+		.type = TYPE_PSYCHIC,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[33] = {
+		.name = MOVE_DOUBLE_TEAM,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[34] = {
+		.name = MOVE_SHOCK_WAVE,
+		.type = TYPE_ELECTRIC,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[35] = {
+		.name = MOVE_SECRET_POWER,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[36] = {
+		.name = MOVE_REST,
+		.type = TYPE_PSYCHIC,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[37] = {
+		.name = MOVE_ATTRACT,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[38] = {
+		.name = MOVE_SURF,
+		.type = TYPE_WATER,
+		.strong = 2,
+		.lvlup = 0
+	},
+	[39] = {
+		.name = MOVE_STRENGTH,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[40] = {
+		.name = MOVE_ROCK_SMASH,
+		.type = TYPE_FIGHTING,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[41] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
 		.strong = 1,
@@ -15197,7 +15365,7 @@ const struct Move Vaporeon_Moves[] = {
 	[7] = {
 		.name = MOVE_AURORA_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[8] = {
@@ -15213,153 +15381,159 @@ const struct Move Vaporeon_Moves[] = {
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_HYDRO_PUMP,
+		.type = TYPE_WATER,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 };
@@ -15392,13 +15566,13 @@ const struct Move Jolteon_Moves[] = {
 	[4] = {
 		.name = MOVE_THUNDER_SHOCK,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[5] = {
 		.name = MOVE_QUICK_ATTACK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[6] = {
@@ -15426,144 +15600,150 @@ const struct Move Jolteon_Moves[] = {
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_THUNDER,
+		.type = TYPE_ELECTRIC,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_THUNDER_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_SHOCK_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_FLASH,
 		.type = TYPE_NORMAL,
 		.strong = 0,
@@ -15611,7 +15791,7 @@ const struct Move Flareon_Moves[] = {
 	[6] = {
 		.name = MOVE_BITE,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[7] = {
@@ -15633,132 +15813,138 @@ const struct Move Flareon_Moves[] = {
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_FLAMETHROWER,
+		.type = TYPE_FIRE,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_ROAR,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_OVERHEAT,
 		.type = TYPE_FIRE,
 		.strong = 2,
@@ -15818,7 +16004,7 @@ const struct Move Porygon_Moves[] = {
 	[8] = {
 		.name = MOVE_TRI_ATTACK,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[9] = {
@@ -15890,7 +16076,7 @@ const struct Move Porygon_Moves[] = {
 	[20] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[21] = {
@@ -15938,7 +16124,7 @@ const struct Move Porygon_Moves[] = {
 	[28] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
@@ -16019,7 +16205,7 @@ const struct Move Omastar_Moves[] = {
 	[2] = {
 		.name = MOVE_BITE,
 		.type = TYPE_DARK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[3] = {
@@ -16059,159 +16245,165 @@ const struct Move Omastar_Moves[] = {
 		.lvlup = 1
 	},
 	[9] = {
+		.name = MOVE_ANCIENT_POWER,
+		.type = TYPE_ROCK,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[10] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 };
@@ -16268,7 +16460,7 @@ const struct Move Kabutops_Moves[] = {
 	[8] = {
 		.name = MOVE_SLASH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[9] = {
@@ -16278,192 +16470,198 @@ const struct Move Kabutops_Moves[] = {
 		.lvlup = 1
 	},
 	[10] = {
+		.name = MOVE_MEGA_DRAIN,
+		.type = TYPE_GRASS,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[11] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[14] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_GIGA_DRAIN,
 		.type = TYPE_GRASS,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[27] = {
+	[28] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[29] = {
 		.name = MOVE_DIG,
 		.type = TYPE_GROUND,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[29] = {
+	[30] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_AERIAL_ACE,
 		.type = TYPE_FLYING,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[34] = {
+	[35] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[35] = {
+	[36] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[36] = {
+	[37] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_THIEF,
 		.type = TYPE_DARK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_CUT,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_ROCK_SMASH,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_DIVE,
 		.type = TYPE_WATER,
 		.strong = 1,
@@ -16511,7 +16709,7 @@ const struct Move Aerodactyl_Moves[] = {
 	[6] = {
 		.name = MOVE_TAKE_DOWN,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[7] = {
@@ -16607,7 +16805,7 @@ const struct Move Aerodactyl_Moves[] = {
 	[22] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[23] = {
@@ -16703,7 +16901,7 @@ const struct Move Aerodactyl_Moves[] = {
 	[38] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[39] = {
@@ -16794,234 +16992,240 @@ const struct Move Snorlax_Moves[] = {
 		.lvlup = 1
 	},
 	[13] = {
+		.name = MOVE_HYPER_BEAM,
+		.type = TYPE_NORMAL,
+		.strong = 2,
+		.lvlup = 1
+	},
+	[14] = {
 		.name = MOVE_MEGA_PUNCH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[14] = {
+	[15] = {
 		.name = MOVE_MEGA_KICK,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[15] = {
+	[16] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[16] = {
+	[17] = {
 		.name = MOVE_COUNTER,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[17] = {
+	[18] = {
 		.name = MOVE_SEISMIC_TOSS,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[18] = {
+	[19] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[19] = {
+	[20] = {
 		.name = MOVE_METRONOME,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[20] = {
+	[21] = {
 		.name = MOVE_ROCK_SLIDE,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[21] = {
+	[22] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[23] = {
 		.name = MOVE_FOCUS_PUNCH,
 		.type = TYPE_FIGHTING,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[23] = {
+	[24] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[25] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[25] = {
+	[26] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[27] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[27] = {
-		.name = MOVE_ICE_BEAM,
-		.type = TYPE_ICE,
-		.strong = 2,
-		.lvlup = 0
-	},
 	[28] = {
-		.name = MOVE_BLIZZARD,
+		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
 		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
+		.name = MOVE_BLIZZARD,
+		.type = TYPE_ICE,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[30] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[30] = {
+	[31] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[31] = {
+	[32] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[32] = {
+	[33] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[33] = {
+	[34] = {
 		.name = MOVE_SOLAR_BEAM,
 		.type = TYPE_GRASS,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[34] = {
-		.name = MOVE_THUNDERBOLT,
-		.type = TYPE_ELECTRIC,
-		.strong = 2,
-		.lvlup = 0
-	},
 	[35] = {
-		.name = MOVE_THUNDER,
+		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
 		.strong = 1,
 		.lvlup = 0
 	},
 	[36] = {
+		.name = MOVE_THUNDER,
+		.type = TYPE_ELECTRIC,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[37] = {
 		.name = MOVE_EARTHQUAKE,
 		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[37] = {
+	[38] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[38] = {
+	[39] = {
 		.name = MOVE_PSYCHIC,
 		.type = TYPE_PSYCHIC,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[39] = {
+	[40] = {
 		.name = MOVE_SHADOW_BALL,
 		.type = TYPE_GHOST,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[40] = {
+	[41] = {
 		.name = MOVE_BRICK_BREAK,
 		.type = TYPE_FIGHTING,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[41] = {
+	[42] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[42] = {
+	[43] = {
 		.name = MOVE_SHOCK_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[43] = {
+	[44] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[44] = {
+	[45] = {
 		.name = MOVE_SANDSTORM,
 		.type = TYPE_ROCK,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[45] = {
+	[46] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[46] = {
+	[47] = {
 		.name = MOVE_ROCK_TOMB,
 		.type = TYPE_ROCK,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[47] = {
+	[48] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[48] = {
+	[49] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[49] = {
+	[50] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[50] = {
+	[51] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[51] = {
+	[52] = {
 		.name = MOVE_STRENGTH,
 		.type = TYPE_NORMAL,
 		.strong = 1,
@@ -17039,7 +17243,7 @@ const struct Move Articuno_Moves[] = {
 	[1] = {
 		.name = MOVE_POWDER_SNOW,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[2] = {
@@ -17087,7 +17291,7 @@ const struct Move Articuno_Moves[] = {
 	[9] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[10] = {
@@ -17201,7 +17405,7 @@ const struct Move Articuno_Moves[] = {
 	[28] = {
 		.name = MOVE_STEEL_WING,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
@@ -17222,13 +17426,13 @@ const struct Move Zapdos_Moves[] = {
 	[0] = {
 		.name = MOVE_PECK,
 		.type = TYPE_FLYING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
 		.name = MOVE_THUNDER_SHOCK,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[2] = {
@@ -17390,7 +17594,7 @@ const struct Move Zapdos_Moves[] = {
 	[28] = {
 		.name = MOVE_STEEL_WING,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
@@ -17417,7 +17621,7 @@ const struct Move Moltres_Moves[] = {
 	[0] = {
 		.name = MOVE_WING_ATTACK,
 		.type = TYPE_FLYING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 1
 	},
 	[1] = {
@@ -17573,7 +17777,7 @@ const struct Move Moltres_Moves[] = {
 	[26] = {
 		.name = MOVE_STEEL_WING,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[27] = {
@@ -17585,7 +17789,7 @@ const struct Move Moltres_Moves[] = {
 	[28] = {
 		.name = MOVE_FLY,
 		.type = TYPE_FLYING,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
 	[29] = {
@@ -17596,7 +17800,7 @@ const struct Move Moltres_Moves[] = {
 	},
 };
 
-const struct Move Dragonair_Moves[] = {
+const struct Move Dragonite_Moves[] = {
 	[0] = {
 		.name = MOVE_WRAP,
 		.type = TYPE_NORMAL,
@@ -17646,171 +17850,261 @@ const struct Move Dragonair_Moves[] = {
 		.lvlup = 1
 	},
 	[8] = {
+		.name = MOVE_WING_ATTACK,
+		.type = TYPE_FLYING,
+		.strong = 1,
+		.lvlup = 1
+	},
+	[9] = {
 		.name = MOVE_DOUBLE_EDGE,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[9] = {
+	[10] = {
 		.name = MOVE_MIMIC,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[10] = {
+	[11] = {
 		.name = MOVE_THUNDER_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[11] = {
+	[12] = {
 		.name = MOVE_SUBSTITUTE,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[12] = {
+	[13] = {
+		.name = MOVE_FOCUS_PUNCH,
+		.type = TYPE_FIGHTING,
+		.strong = 2,
+		.lvlup = 0
+	},
+	[14] = {
+		.name = MOVE_DRAGON_CLAW,
+		.type = TYPE_DRAGON,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[15] = {
 		.name = MOVE_WATER_PULSE,
 		.type = TYPE_WATER,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[13] = {
+	[16] = {
+		.name = MOVE_ROAR,
+		.type = TYPE_NORMAL,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[17] = {
 		.name = MOVE_TOXIC,
 		.type = TYPE_POISON,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[14] = {
+	[18] = {
 		.name = MOVE_HAIL,
 		.type = TYPE_ICE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[15] = {
+	[19] = {
 		.name = MOVE_HIDDEN_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[16] = {
+	[20] = {
 		.name = MOVE_SUNNY_DAY,
 		.type = TYPE_FIRE,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[17] = {
+	[21] = {
 		.name = MOVE_ICE_BEAM,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[18] = {
+	[22] = {
 		.name = MOVE_BLIZZARD,
 		.type = TYPE_ICE,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[19] = {
+	[23] = {
 		.name = MOVE_HYPER_BEAM,
 		.type = TYPE_NORMAL,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[20] = {
+	[24] = {
 		.name = MOVE_PROTECT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[21] = {
+	[25] = {
 		.name = MOVE_RAIN_DANCE,
 		.type = TYPE_WATER,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[22] = {
+	[26] = {
 		.name = MOVE_SAFEGUARD,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[23] = {
+	[27] = {
 		.name = MOVE_FRUSTRATION,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[24] = {
+	[28] = {
 		.name = MOVE_IRON_TAIL,
 		.type = TYPE_STEEL,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[25] = {
+	[29] = {
 		.name = MOVE_THUNDERBOLT,
 		.type = TYPE_ELECTRIC,
-		.strong = 2,
+		.strong = 1,
 		.lvlup = 0
 	},
-	[26] = {
+	[30] = {
 		.name = MOVE_THUNDER,
 		.type = TYPE_ELECTRIC,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[31] = {
+		.name = MOVE_EARTHQUAKE,
+		.type = TYPE_GROUND,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[27] = {
+	[32] = {
 		.name = MOVE_RETURN,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[28] = {
+	[33] = {
+		.name = MOVE_BRICK_BREAK,
+		.type = TYPE_FIGHTING,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[34] = {
 		.name = MOVE_DOUBLE_TEAM,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[29] = {
+	[35] = {
 		.name = MOVE_SHOCK_WAVE,
 		.type = TYPE_ELECTRIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[30] = {
+	[36] = {
 		.name = MOVE_FLAMETHROWER,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[31] = {
+	[37] = {
+		.name = MOVE_SANDSTORM,
+		.type = TYPE_ROCK,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[38] = {
 		.name = MOVE_FIRE_BLAST,
 		.type = TYPE_FIRE,
 		.strong = 2,
 		.lvlup = 0
 	},
-	[32] = {
+	[39] = {
+		.name = MOVE_ROCK_TOMB,
+		.type = TYPE_ROCK,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[40] = {
+		.name = MOVE_AERIAL_ACE,
+		.type = TYPE_FLYING,
+		.strong = 0,
+		.lvlup = 0
+	},
+	[41] = {
 		.name = MOVE_SECRET_POWER,
 		.type = TYPE_NORMAL,
 		.strong = 1,
 		.lvlup = 0
 	},
-	[33] = {
+	[42] = {
 		.name = MOVE_REST,
 		.type = TYPE_PSYCHIC,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[34] = {
+	[43] = {
 		.name = MOVE_ATTRACT,
 		.type = TYPE_NORMAL,
 		.strong = 0,
 		.lvlup = 0
 	},
-	[35] = {
+	[44] = {
+		.name = MOVE_STEEL_WING,
+		.type = TYPE_STEEL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[45] = {
+		.name = MOVE_CUT,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[46] = {
+		.name = MOVE_FLY,
+		.type = TYPE_FLYING,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[47] = {
 		.name = MOVE_SURF,
 		.type = TYPE_WATER,
 		.strong = 2,
+		.lvlup = 0
+	},
+	[48] = {
+		.name = MOVE_STRENGTH,
+		.type = TYPE_NORMAL,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[49] = {
+		.name = MOVE_ROCK_SMASH,
+		.type = TYPE_FIGHTING,
+		.strong = 1,
+		.lvlup = 0
+	},
+	[50] = {
+		.name = MOVE_DIVE,
+		.type = TYPE_WATER,
+		.strong = 1,
 		.lvlup = 0
 	},
 };
@@ -17822,7 +18116,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_POISON,
 		.bst = 525,
 		.moves = Venusaur_Moves,
-		.num_moves = 33
+		.num_moves = 34
 	},
 	[1] = {
 		.species = SPECIES_CHARIZARD,
@@ -17830,7 +18124,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_FLYING,
 		.bst = 534,
 		.moves = Charizard_Moves,
-		.num_moves = 46
+		.num_moves = 47
 	},
 	[2] = {
 		.species = SPECIES_BLASTOISE,
@@ -17838,7 +18132,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_WATER,
 		.bst = 530,
 		.moves = Blastoise_Moves,
-		.num_moves = 42
+		.num_moves = 43
 	},
 	[3] = {
 		.species = SPECIES_BUTTERFREE,
@@ -17902,7 +18196,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_GROUND,
 		.bst = 450,
 		.moves = Sandslash_Moves,
-		.num_moves = 36
+		.num_moves = 37
 	},
 	[11] = {
 		.species = SPECIES_NIDOQUEEN,
@@ -17966,7 +18260,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_GRASS,
 		.bst = 405,
 		.moves = Parasect_Moves,
-		.num_moves = 31
+		.num_moves = 32
 	},
 	[19] = {
 		.species = SPECIES_VENOMOTH,
@@ -17974,7 +18268,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_POISON,
 		.bst = 450,
 		.moves = Venomoth_Moves,
-		.num_moves = 33
+		.num_moves = 34
 	},
 	[20] = {
 		.species = SPECIES_DUGTRIO,
@@ -17982,7 +18276,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_GROUND,
 		.bst = 405,
 		.moves = Dugtrio_Moves,
-		.num_moves = 32
+		.num_moves = 33
 	},
 	[21] = {
 		.species = SPECIES_PERSIAN,
@@ -17990,7 +18284,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_NORMAL,
 		.bst = 440,
 		.moves = Persian_Moves,
-		.num_moves = 39
+		.num_moves = 40
 	},
 	[22] = {
 		.species = SPECIES_GOLDUCK,
@@ -18006,7 +18300,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_FIGHTING,
 		.bst = 455,
 		.moves = Primeape_Moves,
-		.num_moves = 46
+		.num_moves = 47
 	},
 	[24] = {
 		.species = SPECIES_ARCANINE,
@@ -18022,7 +18316,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_FIGHTING,
 		.bst = 500,
 		.moves = Poliwrath_Moves,
-		.num_moves = 39
+		.num_moves = 40
 	},
 	[26] = {
 		.species = SPECIES_ALAKAZAM,
@@ -18038,7 +18332,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_FIGHTING,
 		.bst = 505,
 		.moves = Machamp_Moves,
-		.num_moves = 42
+		.num_moves = 43
 	},
 	[28] = {
 		.species = SPECIES_VICTREEBEL,
@@ -18054,7 +18348,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_POISON,
 		.bst = 515,
 		.moves = Tentacruel_Moves,
-		.num_moves = 31
+		.num_moves = 32
 	},
 	[30] = {
 		.species = SPECIES_GOLEM,
@@ -18062,7 +18356,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_GROUND,
 		.bst = 485,
 		.moves = Golem_Moves,
-		.num_moves = 41
+		.num_moves = 42
 	},
 	[31] = {
 		.species = SPECIES_RAPIDASH,
@@ -18078,7 +18372,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_PSYCHIC,
 		.bst = 490,
 		.moves = Slowbro_Moves,
-		.num_moves = 53
+		.num_moves = 54
 	},
 	[33] = {
 		.species = SPECIES_MAGNETON,
@@ -18086,7 +18380,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_STEEL,
 		.bst = 465,
 		.moves = Magneton_Moves,
-		.num_moves = 29
+		.num_moves = 30
 	},
 	[34] = {
 		.species = SPECIES_FARFETCHD,
@@ -18110,7 +18404,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_ICE,
 		.bst = 475,
 		.moves = Dewgong_Moves,
-		.num_moves = 30
+		.num_moves = 31
 	},
 	[37] = {
 		.species = SPECIES_MUK,
@@ -18134,7 +18428,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_POISON,
 		.bst = 500,
 		.moves = Gengar_Moves,
-		.num_moves = 45
+		.num_moves = 46
 	},
 	[40] = {
 		.species = SPECIES_ONIX,
@@ -18142,7 +18436,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_GROUND,
 		.bst = 385,
 		.moves = Onix_Moves,
-		.num_moves = 35
+		.num_moves = 36
 	},
 	[41] = {
 		.species = SPECIES_HYPNO,
@@ -18166,7 +18460,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_ELECTRIC,
 		.bst = 480,
 		.moves = Electrode_Moves,
-		.num_moves = 31
+		.num_moves = 32
 	},
 	[44] = {
 		.species = SPECIES_EXEGGUTOR,
@@ -18182,7 +18476,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_GROUND,
 		.bst = 425,
 		.moves = Marowak_Moves,
-		.num_moves = 44
+		.num_moves = 45
 	},
 	[46] = {
 		.species = SPECIES_HITMONLEE,
@@ -18190,7 +18484,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_FIGHTING,
 		.bst = 455,
 		.moves = Hitmonlee_Moves,
-		.num_moves = 40
+		.num_moves = 41
 	},
 	[47] = {
 		.species = SPECIES_HITMONCHAN,
@@ -18206,7 +18500,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_NORMAL,
 		.bst = 385,
 		.moves = Lickitung_Moves,
-		.num_moves = 52
+		.num_moves = 53
 	},
 	[49] = {
 		.species = SPECIES_WEEZING,
@@ -18214,7 +18508,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_POISON,
 		.bst = 490,
 		.moves = Weezing_Moves,
-		.num_moves = 33
+		.num_moves = 34
 	},
 	[50] = {
 		.species = SPECIES_RHYDON,
@@ -18254,7 +18548,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_WATER,
 		.bst = 440,
 		.moves = Seadra_Moves,
-		.num_moves = 26
+		.num_moves = 27
 	},
 	[55] = {
 		.species = SPECIES_SEAKING,
@@ -18294,7 +18588,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_PSYCHIC,
 		.bst = 455,
 		.moves = Jynx_Moves,
-		.num_moves = 44
+		.num_moves = 45
 	},
 	[60] = {
 		.species = SPECIES_ELECTABUZZ,
@@ -18326,7 +18620,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_NORMAL,
 		.bst = 490,
 		.moves = Tauros_Moves,
-		.num_moves = 40
+		.num_moves = 41
 	},
 	[64] = {
 		.species = SPECIES_GYARADOS,
@@ -18334,7 +18628,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_FLYING,
 		.bst = 540,
 		.moves = Gyarados_Moves,
-		.num_moves = 40
+		.num_moves = 41
 	},
 	[65] = {
 		.species = SPECIES_LAPRAS,
@@ -18342,7 +18636,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_ICE,
 		.bst = 535,
 		.moves = Lapras_Moves,
-		.num_moves = 41
+		.num_moves = 42
 	},
 	[66] = {
 		.species = SPECIES_DITTO,
@@ -18358,7 +18652,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_WATER,
 		.bst = 525,
 		.moves = Vaporeon_Moves,
-		.num_moves = 35
+		.num_moves = 36
 	},
 	[68] = {
 		.species = SPECIES_JOLTEON,
@@ -18366,7 +18660,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_ELECTRIC,
 		.bst = 525,
 		.moves = Jolteon_Moves,
-		.num_moves = 34
+		.num_moves = 35
 	},
 	[69] = {
 		.species = SPECIES_FLAREON,
@@ -18374,7 +18668,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_FIRE,
 		.bst = 525,
 		.moves = Flareon_Moves,
-		.num_moves = 32
+		.num_moves = 33
 	},
 	[70] = {
 		.species = SPECIES_PORYGON,
@@ -18390,7 +18684,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_WATER,
 		.bst = 495,
 		.moves = Omastar_Moves,
-		.num_moves = 35
+		.num_moves = 36
 	},
 	[72] = {
 		.species = SPECIES_KABUTOPS,
@@ -18398,7 +18692,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_WATER,
 		.bst = 495,
 		.moves = Kabutops_Moves,
-		.num_moves = 42
+		.num_moves = 43
 	},
 	[73] = {
 		.species = SPECIES_AERODACTYL,
@@ -18414,7 +18708,7 @@ const struct Pkmn Pokemon_List[79] = {
 		.type_2 = TYPE_NORMAL,
 		.bst = 540,
 		.moves = Snorlax_Moves,
-		.num_moves = 52
+		.num_moves = 53
 	},
 	[75] = {
 		.species = SPECIES_ARTICUNO,
@@ -18441,12 +18735,12 @@ const struct Pkmn Pokemon_List[79] = {
 		.num_moves = 30
 	},
 	[78] = {
-		.species = SPECIES_DRAGONAIR,
+		.species = SPECIES_DRAGONITE,
 		.type_1 = TYPE_DRAGON,
-		.type_2 = TYPE_DRAGON,
-		.bst = 420,
-		.moves = Dragonair_Moves,
-		.num_moves = 36
+		.type_2 = TYPE_FLYING,
+		.bst = 600,
+		.moves = Dragonite_Moves,
+		.num_moves = 51
 	},
 };
 
