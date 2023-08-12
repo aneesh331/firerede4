@@ -3755,10 +3755,6 @@ static void HandleEndTurn_BattleWon(void)
             break;
         }
     }
-    else
-    {
-        gBattlescriptCurrInstr = BattleScript_PayDayMoneyAndPickUpItems;
-    }
     gBattleMainFunc = HandleEndTurn_FinishBattle;
 }
 
