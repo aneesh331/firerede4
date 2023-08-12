@@ -16,6 +16,8 @@
 #include "random.h"
 #include "data.h"
 #include "constants/songs.h"
+#include "event_data.h"
+#include "vars.h"
 
 #define INTRO_SPECIES SPECIES_NIDORAN_F
 
@@ -703,6 +705,7 @@ void StartNewGameScene(void)
         dest[i] = EOS;
     gPlttBufferUnfaded[0] = RGB_BLACK;
     gPlttBufferFaded[0]   = RGB_BLACK;
+    VarSet(VAR_0x4029, 0);
     SetMainCallback2(CB2_NewGame);
 }
 

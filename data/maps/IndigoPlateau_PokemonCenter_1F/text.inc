@@ -8,6 +8,10 @@ IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
     .string "This is it!\n"
     .string "Go for it!$"
 
+IndigoPlateau_PokemonCenter_1F_Text_YouCantGoIn::
+    .string "You can't go in without\n"
+    .string "any POKéMON.$"
+
 IndigoPlateau_PokemonCenter_1F_Text_WelcomeToTheEliteFour::
     .string "Welcome to the ELITE FOUR! Would\n"
     .string "you like to take on the challenge?$"

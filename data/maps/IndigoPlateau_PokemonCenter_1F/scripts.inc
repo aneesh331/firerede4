@@ -31,6 +31,12 @@ IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
 	release
 	end
 
+IndigoPlateau_PokemonCenter_1F_EventScript_YouCantGoIn::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_YouCantGoIn
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	release
+	end
+
 IndigoPlateau_PokemonCenter_1F_EventScript_SpeakWithTheClerk::
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_SpeakWithTheClerk
 	release
@@ -39,6 +45,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_SpeakWithTheClerk::
 IndigoPlateau_PokemonCenter_1F_EventScript_GenerateTeam::
 	callnative GenerateTeam
 	setflag FLAG_0x0AF
+	setvar VAR_0x4029, 1
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_ThereYouGo
 	release
 	end
