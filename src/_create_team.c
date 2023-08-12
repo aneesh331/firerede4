@@ -104,16 +104,13 @@ static const struct Move *GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
     const struct Move *move;
     u8 move_factor;
     move_factor = 1;
+    if (pkmn->species == SPECIES_DITTO) return &pkmn->moves[0];
     do {move = GetRandomMove(pkmn);}
     while (CheckForDuplicateMoves(move->name, moveset) == 1);
     if (moveset[0] == MOVE_NONE)
     {
         if (move->strong != 2) move_factor += 32;
         if (move->lvlup == 0) move_factor += 16;
-    }
-    else if (pkmn->species == SPECIES_DITTO)
-    {
-        return MOVE_NONE;
     }
     else if (moveset[1] == MOVE_NONE)
     {
@@ -172,3 +169,4 @@ void GenerateTeam(void)
     free(team);
     free(movesets);
 }
+
