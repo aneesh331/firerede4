@@ -156,7 +156,7 @@ void GenerateTeam(void)
     for (i = 0; i < 6; i++)
     {
         movesets[i] = GenerateMoveset(team[i]);
-        CreateMonWithNature(&gPlayerParty[i], team[i]->species, 100, USE_RANDOM_IVS, Random() % NUM_NATURES);
+        CreateMonWithNature(&gPlayerParty[i], team[i]->species, 55, USE_RANDOM_IVS, Random() % NUM_NATURES);
         if (team[i]->species == SPECIES_DITTO)
         {
             free(movesets[i]);

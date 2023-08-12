@@ -703,8 +703,7 @@ void StartNewGameScene(void)
         dest[i] = src[i];
     for (; i < PLAYER_NAME_LENGTH + 1; i++)
         dest[i] = EOS;
-    gPlttBufferUnfaded[0] = RGB_BLACK;
-    gPlttBufferFaded[0]   = RGB_BLACK;
+    
     VarSet(VAR_0x4029, 0);
     SetMainCallback2(CB2_NewGame);
 }
