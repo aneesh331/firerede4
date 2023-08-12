@@ -36,12 +36,7 @@ PokemonLeague_ChampionsRoom_Text_RematchIntro::
 
 PokemonLeague_ChampionsRoom_Text_Defeat::
     .string "NO!\n"
-    .string "That can't be!\l"
-    .string "You beat me at my best!\p"
-    .string "After all that work to become\n"
-    .string "the LEAGUE CHAMP?\p"
-    .string "My reign is over already?\n"
-    .string "It's not fair!$"
+    .string "That can't be!$"
 
 PokemonLeague_ChampionsRoom_Text_Victory::
     .string "はーはッ！\n"
@@ -55,13 +50,9 @@ PokemonLeague_ChampionsRoom_Text_Victory::
     .string "はーッ！　はーはッはッ！$"
 
 PokemonLeague_ChampionsRoom_Text_PostBattle::
-    .string "Why?\n"
-    .string "Why did I lose?\p"
-    .string "I never made any mistakes raising\n"
-    .string "my POKéMON…\p"
-    .string "Darn it! You're the new POKéMON\n"
-    .string "LEAGUE CHAMPION!\p"
-    .string "Although I don't like to admit it…$"
+    .string "{PLAYER}, you'll never escape\n"
+    .string "this place. We'll fight eachother\p"
+    .string "to the end of eternity.$"
 
 PokemonLeague_ChampionsRoom_Text_OakPlayer::
     .string "OAK: {PLAYER}!$"

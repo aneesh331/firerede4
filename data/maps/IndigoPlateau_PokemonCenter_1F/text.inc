@@ -17,12 +17,12 @@ IndigoPlateau_PokemonCenter_1F_Text_SpeakWithTheClerk::
     .string "have any questions.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_ThereYouGo::
-    .string "There you go. Check your\n"
-    .string "POKéMON. Good luck!$"
+    .string "There you go. Check your POKéMON\n"
+    .string "and BAG. Good luck!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_SwitchOutTeam::
-    .string "Welcome back! Would you like\n"
-    .string "to switch out your POKéMON?$"
+    .string "Welcome back! Would you like to\n"
+    .string "switch out your POKéMON?$"
 
 IndigoPlateau_PokemonCenter_1F_Text_YouShouldTry::
     .string "You should attempt the challenge\n"
@@ -30,6 +30,43 @@ IndigoPlateau_PokemonCenter_1F_Text_YouShouldTry::
     .string "before switching it out.\n"
     .string "Sometimes your POKéMON will\p"
     .string "surprise you with their power!$"
+
+IndigoPlateau_PokemonCenter_1F_Text_WouldYouLikeMeToExplain::
+    .string "Hello {PLAYER}! Would you like me\n"
+    .string "to explain the premise of this game?$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RulesExplain::
+    .string "In the POKéMON ELITE FOUR challenge,\n"
+    .string "you are provided with six randomly\l"
+    .string "generated POKéMON that are\l"
+    .string "obtainable in a normal playthrough\l"
+    .string "of this game up to the point of\l"
+    .string "the POKéMON LEAGUE.\p"
+    .string "Don't worry through, thanks to\n"
+    .string "ANISH's implementation of a\l"
+    .string "semi-random balancing algorithm,\l"
+    .string "you'll get a varied enough team\l"
+    .string "in terms of both stats and type.\p"
+    .string "Your POKéMON will also hopefully\n"
+    .string "have some good moves as ANISH's\l"
+    .string "algorithm predicts.\p"
+    .string "You'll also get a BAG full of\n"
+    .string "useful items and TMs, but no revives\l"
+    .string "because that's cheating!\p"
+    .string "You can attempt the challenge as\n"
+    .string "many times as you wish with the\l"
+    .string "same team or switch it out\l"
+    .string "as long as you've made one\l"
+    .string "attempt. Although, your BAG will\l"
+    .string "randomly reset every time.\p"
+    .string "Oh, well I've been chirping on for\n"
+    .string "much too long now. Talk to the\l"
+    .string "COOLTRAINER up front to get your\l"
+    .string "team and items. Good luck!$"
+
+IndigoPlateau_PokemonCenter_1F_Text_Enjoy::
+    .string "No worries. Enjoy the challenge\n"
+    .string "and may the odds be in your favor!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing::
     .string "I am so sorry, but you've wasted\n"

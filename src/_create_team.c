@@ -108,24 +108,28 @@ static const struct Move *GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
     while (CheckForDuplicateMoves(move->name, moveset) == 1);
     if (moveset[0] == MOVE_NONE)
     {
-        if (move->strong != 2) move_factor += 31;
-        if (move->lvlup == 0) move_factor += 15;
+        if (move->strong != 2) move_factor += 32;
+        if (move->lvlup == 0) move_factor += 16;
+    }
+    else if (pkmn->species == SPECIES_DITTO)
+    {
+        return MOVE_NONE;
     }
     else if (moveset[1] == MOVE_NONE)
     {
-        if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 31;
-        if (move->strong != 2) move_factor += 15;
-        if (move->lvlup == 0) move_factor += 15;
+        if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 32;
+        if (move->strong != 2) move_factor += 16;
+        if (move->lvlup == 0) move_factor += 16;
     }
     else if (moveset[2] == MOVE_NONE)
     {
-        if (move->strong != 0) move_factor += 31;
-        if (move->lvlup == 0) move_factor += 15;
+        if (move->strong != 0) move_factor += 32;
+        if (move->lvlup == 0) move_factor += 16;
     }
     else if (moveset[3] == MOVE_NONE)
     {
-        if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 31;
-        if (move->lvlup == 0) move_factor += 15;
+        if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 32;
+        if (move->lvlup == 0) move_factor += 16;
     }
     if (Random() % move_factor != 0) move = GenerateMove(pkmn, moveset);
     return move;
@@ -153,7 +157,11 @@ void GenerateTeam(void)
     {
         movesets[i] = GenerateMoveset(team[i]);
         CreateMonWithNature(&gPlayerParty[i], team[i]->species, 100, USE_RANDOM_IVS, Random() % NUM_NATURES);
-        if (team[i]->species == SPECIES_DITTO) continue;
+        if (team[i]->species == SPECIES_DITTO)
+        {
+            free(movesets[i]);
+            continue;
+        }
         DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][0]);
         DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][1]);
         DeleteFirstMoveAndGiveMoveToMon(&gPlayerParty[i], movesets[i][2]);

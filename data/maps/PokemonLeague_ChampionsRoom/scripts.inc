@@ -66,35 +66,7 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom::
 	setflag FLAG_DEFEATED_CHAMP
 	setflag FLAG_TEMP_4
 	msgbox PokemonLeague_ChampionsRoom_Text_PostBattle
-	playbgm MUS_SLOW_PALLET, 0
-	addobject LOCALID_PROF_OAK
-	msgbox PokemonLeague_ChampionsRoom_Text_OakPlayer
-	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerWatchOakEnter
-	applymovement LOCALID_RIVAL, PokemonLeague_ChampionsRoom_Movement_RivalWatchOakEnter
-	applymovement LOCALID_PROF_OAK, PokemonLeague_ChampionsRoom_Movement_OakEnter
-	waitmovement 0
-	delay 25
-	specialvar VAR_RESULT, GetStarterSpecies
-	bufferspeciesname STR_VAR_1, VAR_RESULT
-	msgbox PokemonLeague_ChampionsRoom_Text_OakCongratulations
-	applymovement LOCALID_PROF_OAK, Common_Movement_WalkInPlaceFasterRight
-	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	msgbox PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival
-	closemessage
-	applymovement LOCALID_PROF_OAK, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	delay 20
-	msgbox PokemonLeague_ChampionsRoom_Text_OakPlayerComeWithMe
-	closemessage
-	delay 13
-	applymovement LOCALID_PROF_OAK, PokemonLeague_ChampionsRoom_Movement_OakExit
-	applymovement OBJ_EVENT_ID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerExit
-	waitmovement 0
-	setvar VAR_TEMP_1, 1
-	warp MAP_POKEMON_LEAGUE_HALL_OF_FAME, 5, 12
-	waitstate
+	callnative StartNewGameScene
 	releaseall
 	end
 
