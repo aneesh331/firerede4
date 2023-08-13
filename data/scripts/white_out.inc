@@ -5,6 +5,7 @@ EventScript_AfterWhiteOutHeal::
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
 	call EventScript_AfterWhiteOutHealMsg
 	applymovement VAR_LAST_TALKED, Movement_Bow
+	callnative GenerateItems
 	waitmovement 0
 	fadedefaultbgm
 	releaseall

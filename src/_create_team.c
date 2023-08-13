@@ -4,6 +4,8 @@
 #include "pokemon.h"
 #include "event_data.h"
 #include "constants/flags.h"
+#include "item.h"
+#include "constants/items.h"
 
 static u8 *InitTypeFactors(void);
 static void UpdateTypeFactors(const struct Pkmn *pkmn, u8 *TypeFactors);
@@ -170,3 +172,40 @@ void GenerateTeam(void)
     free(movesets);
 }
 
+void GenerateItems(void)
+{
+    u8 random;
+    u16 random16;
+    u8 i;
+    ClearBag();
+    AddBagItem(ITEM_POTION, 15);
+    AddBagItem(ITEM_SUPER_POTION, 12);
+    AddBagItem(ITEM_HYPER_POTION, 10);
+    AddBagItem(ITEM_MAX_POTION, 3);
+    AddBagItem(ITEM_FULL_RESTORE, 2);
+    AddBagItem(ITEM_ETHER, 1);
+    AddBagItem(ITEM_ELIXIR, 1);
+    // 2 random stat boost items
+    AddBagItem(Random() % 7 + 73, 1);
+    AddBagItem(Random() % 7 + 73, 1);
+    // 1-4 PPUps random
+    random = Random() % 3 + 1;
+    AddBagItem(ITEM_PP_UP, random);
+    // 0.25 chance to get PP max
+    random = Random() % 3;
+    if (random == 0) AddBagItem(ITEM_PP_MAX, 1);
+    // 2-5 random held items
+    random = Random() % 4 + 2;
+    for (i = 0; i < random; i++)
+    {
+        random16 = Random() % 47 + 179;
+        AddBagItem(random16, 1);
+    }
+    // 10 random tms
+    AddBagItem(ITEM_TM_CASE, 1);
+    for (i = 0; i < 10; i++)
+    {
+        random16 = Random() % 50 + 289;
+        AddBagItem(random16, 1);
+    }
+}

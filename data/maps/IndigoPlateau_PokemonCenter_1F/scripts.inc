@@ -23,7 +23,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
 	setvar VAR_STARTER_MON, VAR_RESULT
 	goto_if_set FLAG_SYS_POKEMON_GET, IndigoPlateau_PokemonCenter_1F_EventScript_SwitchOutTeam
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_WelcomeToTheEliteFour
-	multichoice 19, 8, MULTICHOICE_YES_NO, FALSE | (TRUE << 1)
+	multichoice 22, 8, MULTICHOICE_YES_NO, FALSE | (TRUE << 1)
 	switch VAR_RESULT
 	case 0, IndigoPlateau_PokemonCenter_1F_EventScript_GenerateTeam
 	case 1, IndigoPlateau_PokemonCenter_1F_EventScript_SpeakWithTheClerk
@@ -44,6 +44,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_SpeakWithTheClerk::
 
 IndigoPlateau_PokemonCenter_1F_EventScript_GenerateTeam::
 	callnative GenerateTeam
+	callnative GenerateItems
 	setflag FLAG_0x0AF
 	setvar VAR_0x4029, 1
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_ThereYouGo
@@ -86,7 +87,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Clerk::
 	lock
 	faceplayer
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_WouldYouLikeMeToExplain
-	multichoice 19, 8, MULTICHOICE_YES_NO, FALSE | (TRUE << 1)
+	multichoice 22, 8, MULTICHOICE_YES_NO, FALSE | (TRUE << 1)
 	switch VAR_RESULT
 	case 0, IndigoPlateau_PokemonCenter_1F_EventScript_RulesExplain
 	case 1, IndigoPlateau_PokemonCenter_1F_EventScript_Enjoy
