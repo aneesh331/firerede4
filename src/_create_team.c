@@ -44,12 +44,12 @@ static u8 GetBSTFactor(const struct Pkmn *pkmn, const struct Pkmn *last_pkmn)
     if (last_pkmn->bst < MEDIANBST)
     {
         if (pkmn->bst < MEDIANBST) return 2;
-        else return 1;
+        else return 0;
     }
     else
     {
         if (pkmn->bst > MEDIANBST) return 2;
-        else return 1;
+        else return 0;
     }
 }
 
@@ -70,7 +70,7 @@ static const struct Pkmn *GeneratePokemon(u8 slot, u8 *TypeFactors, const struct
         do {new_pkmn = &Pokemon_List[Random() % ARRAY_COUNT(Pokemon_List)];}
         while (CheckForDuplicatePokemon(new_pkmn, team) == 1);
         new_pkmn_factor = GetTypeFactor(new_pkmn, TypeFactors) + GetBSTFactor(new_pkmn, team[slot - 1]);
-        if (Random() % new_pkmn_factor != 0) new_pkmn = GeneratePokemon(slot, TypeFactors, team);
+        if (Random() % new_pkmn_factor > 2) new_pkmn = GeneratePokemon(slot, TypeFactors, team);
     }
     UpdateTypeFactors(new_pkmn, TypeFactors);
     return new_pkmn;
@@ -109,27 +109,14 @@ static const struct Move *GenerateMove(const struct Pkmn *pkmn, u16 *moveset)
     if (pkmn->species == SPECIES_DITTO) return &pkmn->moves[0];
     do {move = GetRandomMove(pkmn);}
     while (CheckForDuplicateMoves(move->name, moveset) == 1);
-    if (moveset[0] == MOVE_NONE)
-    {
-        if (move->strong != 2) move_factor += 32;
-        if (move->lvlup == 0) move_factor += 16;
-    }
-    else if (moveset[1] == MOVE_NONE)
-    {
-        if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 32;
-        if (move->strong != 2) move_factor += 16;
-        if (move->lvlup == 0) move_factor += 16;
-    }
-    else if (moveset[2] == MOVE_NONE)
-    {
-        if (move->strong != 0) move_factor += 32;
-        if (move->lvlup == 0) move_factor += 16;
-    }
-    else if (moveset[3] == MOVE_NONE)
-    {
-        if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 32;
-        if (move->lvlup == 0) move_factor += 16;
-    }
+    // make damaging moves more likely to appear
+    if (move->lvlup == 0) move_factor += 8;
+    // make strong damaging moves the most likely to appear
+    if (move->lvlup == 1) move_factor += 4;
+    // make STAB moves more likely to appear
+    if (move->type != pkmn->type_1 && move->type != pkmn->type_2) move_factor += 4;
+    // make lvlup moves more likely to appear
+    if (move->lvlup == 0) move_factor += 2;
     if (Random() % move_factor != 0) move = GenerateMove(pkmn, moveset);
     return move;
 }
