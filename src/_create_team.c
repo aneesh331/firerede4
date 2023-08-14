@@ -172,6 +172,7 @@ void GenerateItems(void)
     AddBagItem(ITEM_FULL_RESTORE, 2);
     AddBagItem(ITEM_ETHER, 1);
     AddBagItem(ITEM_ELIXIR, 1);
+    AddBagItem(ITEM_FULL_HEAL, 5);
     // 2 random stat boost items
     AddBagItem(Random() % 7 + 73, 1);
     AddBagItem(Random() % 7 + 73, 1);
