@@ -19,8 +19,6 @@ IndigoPlateau_PokemonCenter_1F_EventScript_CheckBlockDoor::
 IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
 	lock
 	faceplayer
-	random 3
-	setvar VAR_STARTER_MON, VAR_RESULT
 	goto_if_set FLAG_SYS_POKEMON_GET, IndigoPlateau_PokemonCenter_1F_EventScript_SwitchOutTeam
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_WelcomeToTheEliteFour
 	multichoice 22, 8, MULTICHOICE_YES_NO, FALSE | (TRUE << 1)

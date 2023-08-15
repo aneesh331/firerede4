@@ -60,3 +60,4 @@ prefabs.json
 .vscode/*.*
 *.js
 *.sym
+*.ss*
