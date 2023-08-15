@@ -164,7 +164,6 @@ void GenerateItems(void)
     u8 random;
     u16 random16;
     u8 i;
-    ClearBag();
     AddBagItem(ITEM_POTION, 15);
     AddBagItem(ITEM_SUPER_POTION, 12);
     AddBagItem(ITEM_HYPER_POTION, 10);
@@ -195,5 +194,23 @@ void GenerateItems(void)
     {
         random16 = Random() % 50 + 289;
         AddBagItem(random16, 1);
+    }
+}
+
+void RefreshItems(void)
+{
+    while (BagGetQuantityByItemId(ITEM_POTION) < 15) AddBagItem(ITEM_POTION, 1);
+    while (BagGetQuantityByItemId(ITEM_SUPER_POTION) < 12) AddBagItem(ITEM_SUPER_POTION, 1);
+    while (BagGetQuantityByItemId(ITEM_HYPER_POTION) < 10) AddBagItem(ITEM_HYPER_POTION, 1);
+    while (BagGetQuantityByItemId(ITEM_MAX_POTION) < 3) AddBagItem(ITEM_MAX_POTION, 1);
+    while (BagGetQuantityByItemId(ITEM_FULL_RESTORE) < 2) AddBagItem(ITEM_FULL_RESTORE, 1);
+    while (BagGetQuantityByItemId(ITEM_ETHER) < 1) AddBagItem(ITEM_ETHER, 1);
+    while (BagGetQuantityByItemId(ITEM_ELIXIR) < 1) AddBagItem(ITEM_ELIXIR, 1);
+    while (BagGetQuantityByItemId(ITEM_FULL_HEAL) < 5) AddBagItem(ITEM_FULL_HEAL, 1);
+    while (BagGetQuantityByItemId(73) + BagGetQuantityByItemId(74) + BagGetQuantityByItemId(75) + 
+    BagGetQuantityByItemId(76) + BagGetQuantityByItemId(77) + BagGetQuantityByItemId(78) + BagGetQuantityByItemId(79) < 2)
+    {
+        AddBagItem(Random() % 7 + 73, 1);
+        AddBagItem(Random() % 7 + 73, 1);
     }
 }

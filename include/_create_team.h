@@ -28,6 +28,7 @@ struct Pkmn
 
 void GenerateTeam(void);
 void GenerateItems(void);
+void RefreshItems(void);
 
 const struct Move Venusaur_Moves[] = {
 	[0] = {
