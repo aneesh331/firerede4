@@ -164,6 +164,7 @@ void GenerateItems(void)
     u8 random;
     u16 random16;
     u8 i;
+    ClearBag();
     AddBagItem(ITEM_POTION, 15);
     AddBagItem(ITEM_SUPER_POTION, 12);
     AddBagItem(ITEM_HYPER_POTION, 10);
