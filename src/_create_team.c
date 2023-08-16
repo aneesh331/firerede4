@@ -187,6 +187,11 @@ void GenerateItems(void)
     for (i = 0; i < random; i++)
     {
         random16 = Random() % 47 + 179;
+        if (random16 == ITEM_EXP_SHARE || random16 == ITEM_SOOTHE_BELL || random16 == ITEM_AMULET_COIN || random16 == ITEM_EVERSTONE || random16 == ITEM_LUCKY_EGG)
+        {
+            i--;
+            continue;
+        }
         AddBagItem(random16, 1);
     }
     // 10 random tms
